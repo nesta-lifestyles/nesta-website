@@ -1,0 +1,108 @@
+@media(min-width:600px){
+    .footer {
+        display: flex;
+        flex-direction:row;
+        width: 100%;
+    }
+    .footerInformation{
+        width: 20%;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    .footerLegal{
+        width: 20%;
+    }
+    .footerSocial{
+        width: 20%;
+    }
+    .li {
+        color: black;
+        font-family: Arial;
+        font-style: normal;
+        width: auto;
+        height: auto;
+        margin-top: 5px;
+        margin-right: 10px;
+        list-style: none;
+      }
+    
+      .socialFaIcons{
+        color: rgb(128, 128, 128);
+        font-family: Arial;
+        font-style: normal;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        text-align: center;
+      }
+    
+      .socialFaIcons:hover {
+        color: rgb(39, 38, 38);
+      }
+    
+      .socialAddress{
+        margin-top: 25px;
+        color: rgb(128, 128, 128);
+        size: 2px;
+        font-size: 15px;
+      }
+    
+      .copyRightFaIcon{
+        color: rgb(128, 128, 128);
+        font-family: Arial;
+        font-style: normal;
+        width: small;
+        height: small;
+        text-align: center;
+      }
+    
+    .copyrightDivider{
+        margin: 10px;
+        flex: 1px;
+        height: 1px;
+        background-color: black;
+    }
+    .copyright{
+        padding: 5px;
+        text-align: center;
+        font-size: 15px;
+        
+    }
+    
+    .mapLocation{
+        max-width: auto;
+        margin-left: 40px;
+        margin-bottom: 50px;
+        max-height: 200px;
+    }
+    .text {
+        color: rgb(128, 128, 128);
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        text-decoration: none;
+      }
+    
+    .text:hover{
+        text-decoration: underline;
+    }
+}
+
+@media (max-width:600px) {
+    .copyrightDivider{
+        margin: 10px;
+        flex: 1px;
+        height: 1px;
+        background-color: black;
+    }
+    .copyright{
+        text-align: center;
+        font-size: small;
+    }
+    
+    .mapLocation{
+        margin-bottom: 50px;
+        max-width: 100%;
+        max-height: 200px;
+    }   
+}

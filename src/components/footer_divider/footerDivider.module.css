@@ -1,0 +1,31 @@
+
+@media(min-width:600px) {
+    .dividerMessage{
+        text-align: center;
+        color:  rgb(76, 66,62);
+        font-size: 70px;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .dividerMessage{
+        text-align: center;
+        color:  rgb(76, 66,62);
+        font-size: 20px;
+    }    
+}
+.divider{
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    flex: 20px;
+    height: 10px;
+    background-color: rgb(224, 230,234);
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(222, 222, 221);
+    
+}
+
+
