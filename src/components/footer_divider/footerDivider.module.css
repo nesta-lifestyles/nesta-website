@@ -25,13 +25,13 @@
     .dividerMessage{
         text-align: center;
         color:  rgb(76, 66,62);
-        font-size: 20px;
+        font-size: 15pt;
     } 
     .divider{
         margin-top: 10px;
         margin-left: 20px;
         margin-right: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         flex: 20px;
         height: 10px;
         background-color: rgb(224, 230,234);

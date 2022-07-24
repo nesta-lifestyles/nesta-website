@@ -69,15 +69,19 @@
     }
 
     .mainIdeationTitleH1{
-        font-size: 70px;
+        font-size: 32pt;
         color: rgb(81, 71, 66);
-        height: 100px;
+        height: auto;
+        font-style: bold;
         animation: fadeIn 5s; 
+        margin-top: 40px;
+        margin-bottom: 0px;
     }
     .mainIdeationTitleH3{
-        font-size: 20px;
+        font-size: 15pt;
         color: rgb(102, 102, 102);
         height: 100px;
+        margin: 10px;
         animation: fadeIn 5s; 
     }
       

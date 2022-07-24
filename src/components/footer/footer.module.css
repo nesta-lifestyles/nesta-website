@@ -89,23 +89,17 @@
 }
 
 @media (max-width:600px) {
-    .footer {
-        width: 100%;
-    }
     .footerInformation{
-        width: 100%; 
-        margin-left: 20px;
+        padding-left: 20px;
     }
     
     .footerLegal{
-        width: 100%;
-        margin-top: 20px;
-        margin-left: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
     }
    
     .footerSocial{
-        width: 100%; 
-        margin-left: 20px;
+         padding-left: 20px;
     }
     
 
