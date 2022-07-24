@@ -94,13 +94,21 @@
     }
     .footerInformation{
         width: 100%; 
+        margin-left: 20px;
     }
     
     .footerLegal{
         width: 100%;
         margin-top: 20px;
+        margin-left: 20px;
     }
    
+    .footerSocial{
+        width: 100%; 
+        margin-left: 20px;
+    }
+    
+
     .li {
         color: black;
         font-family: Arial;
@@ -140,7 +148,8 @@
       }
 
     .copyrightDivider{
-        margin: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         flex: 1px;
         height: 1px;
         background-color: black;
@@ -148,11 +157,5 @@
     .copyright{
         text-align: center;
         font-size: small;
-    }
-    
-    .mapLocation{
-        margin-bottom: 50px;
-        max-width: 100%;
-        max-height: 200px;
     }   
 }
