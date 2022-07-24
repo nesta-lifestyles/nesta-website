@@ -67,13 +67,13 @@ render(){
                         <FontAwesomeIcon className={styles.socialFaIcons}  icon={faPinterest} />
                         <FontAwesomeIcon className={styles.socialFaIcons} icon={faWhatsapp} />
                     </div>
-                    <div className={styles.socialAddress}>
+                    {/* <div className={styles.socialAddress}>
                     address : 11C,6th cross ,HSR
                     layout ,Bengaluru-22.India
-                    </div>
+                    </div> */}
                 </div>
                 <div>
-                    <img className={styles.mapLocation} src={mapLocation}/>
+                    {/* <img className={styles.mapLocation} src={mapLocation}/> */}
                 </div>
 
             </div>

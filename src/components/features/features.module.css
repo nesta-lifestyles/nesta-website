@@ -39,9 +39,9 @@
     
     .features{
         width: 100%;
-        display: flex;
         justify-content: center;
-        flex-direction: row;
+        align-items: center;
+        text-align: center;
     }
     
     .feturesImg{
@@ -50,7 +50,7 @@
     }
     
     .eachFeatures{
-        width: 200px;
+        width: 100%;
         text-align: center;
         margin-left: 20px;
         margin-right: 20px;
@@ -63,12 +63,13 @@
 
     .featureName{
         margin-top: 10px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         justify-content: center;
         text-align: center;
         color: rgb(128, 128, 128);
         font-size: 10px;
         animation:  fadeIn 3s;
+        
     }
 }
 
