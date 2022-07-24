@@ -13,7 +13,7 @@ class Ideation extends React.Component {
             <div className={styles.ideation}>
                 <div className={styles.mainIdeation} >
                         <div className={styles.mainIdeationTitleContainer}>
-                            <p className={styles.mainIdeationTitleH1}>Exquisite Architecture <br></br></p>
+                            <p className={styles.mainIdeationTitleH1}>Exquisite Spaces <br></br></p>
                             <p className={styles.mainIdeationTitleH3}>Choose your Nesta and Relive...</p>
                         </div>
                         <div className={styles.mainIdeationImageContainer}>
