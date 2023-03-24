@@ -10,7 +10,10 @@ import Features from './components/features/features'
 import FooterDivider from './components/footer_divider/footerDivider';
 import Ideation from './components/ideation/ideation';
 import Map from './components/footer/map/office_location';
+import underMentenence from './images/maintainence_page.png';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 const location = {
   address: '1600 Amphitheatre Parkway, Mountain View, california.',
   lat: 37.42216,
@@ -19,12 +22,25 @@ const location = {
 
 root.render(
   <div >
-     <Router>
+   <Router>
       <div className={styles.navBar}>
         <Navbar/>
       </div>
     </Router>
-  <div className={styles.ideation}>
+    <div style={{
+      position:'absolute',
+      marginLeft:'auto',
+      marginRight:'auto',
+      width:'100%',
+      maxWidth:'100%',
+      height:'1000%',
+      maxHeight:'100%'
+    }}>
+      <img className= {styles.image} src={underMentenence} />
+    </div>
+    
+     
+  {/* <div className={styles.ideation}>
     <Ideation />
   </div>
   <div className={styles.features}>
@@ -35,7 +51,7 @@ root.render(
       </div>
   <div className={styles.footer}>
     <Footer></Footer>
-  </div>
+  </div> */}
 
   </div>
   
