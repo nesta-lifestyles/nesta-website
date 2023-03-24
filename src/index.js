@@ -28,13 +28,7 @@ root.render(
       </div>
     </Router>
     <div style={{
-      position:'absolute',
-      marginLeft:'auto',
-      marginRight:'auto',
-      width:'100%',
-      maxWidth:'100%',
-      height:'1000%',
-      maxHeight:'100%'
+     
     }}>
       <img className= {styles.image} src={underMentenence} />
     </div>
