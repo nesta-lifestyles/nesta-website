@@ -113,9 +113,9 @@ code {
       margin-top: 100px;
       margin-bottom: auto;
       position: absolute;
-      max-width: 500px;
+      max-width: 400px;
       max-height: 300px;
-      width: 500px;
+      width: 400px;
       height: 300px;
     }
 }
