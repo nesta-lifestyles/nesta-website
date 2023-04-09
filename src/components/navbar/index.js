@@ -31,14 +31,13 @@ const LogoLayout = styled.div`
     @media (max-width:600px){
         right: 20px;
         height:62px;
-        width: 95%;
         margin-right: 70px;
         max-height: 62px;
         border-radius: 50px;
         margin-right: 70px;
         margin-top: 0px;
         left: 10px;
-        right: 0px;
+        right: 10px;
         top: 11px;
         background-color: #1B1E1E;
     }
