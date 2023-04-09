@@ -46,7 +46,8 @@ function App() {
        <Router>
         <Navbar/>
        <ContentContainer>
-        <Routes> 
+        <Routes>
+              <Route path='/'  Component={NestaDesign} /> 
               <Route path='/design'  Component={NestaDesign} />
               <Route path='/ville'  Component={NestaVille} />
           </Routes>     
