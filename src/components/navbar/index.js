@@ -31,12 +31,14 @@ const LogoLayout = styled.div`
     @media (max-width:600px){
         right: 20px;
         height:62px;
+        width: 95%;
         margin-right: 70px;
         max-height: 62px;
         border-radius: 50px;
         margin-right: 70px;
         margin-top: 0px;
         left: 10px;
+        right: 0px;
         top: 11px;
         background-color: #1B1E1E;
     }
@@ -47,7 +49,7 @@ export const Bars = styled.img`
   @media screen and (max-width: 600px) {
     display: block;
     position: absolute;
-    max-width: 34px;
+    max-width: 24px;
     max-height: 34px;
     margin-top: 0px;
     top: 5px;
@@ -172,7 +174,7 @@ const MenuItem = styled(Link)`
 
 const Navbar=() => {
 
-    const [showNavBar, updateNavBar] = useState(true)
+    const [showNavBar, updateNavBar] = useState(false)
     
     const NavBarHandler = () => {
         updateNavBar(!showNavBar)
@@ -183,13 +185,13 @@ const Navbar=() => {
             <LogoLayout>
                 <LogoLink srcSet={`${invertedLogoImage} 300w, ${invertedLogoImage} 768w, ${invertedLogoImage} 1280w`} />
             </LogoLayout>
-            <Bars onClick={NavBarHandler} />
+            {/* <Bars onClick={NavBarHandler} /> */}
         {showNavBar && (<MenuLink className="menu-link">
                 {/* <div>
                     <MenuItem to='/ville' >Nesta Ville</MenuItem>
                 </div> */}
                 <div>
-                    <MenuItem to='/design' >Nesta Designs</MenuItem>
+                    <MenuItem to='/design'> Nesta Designs</MenuItem>
                 </div>
                 {/* <div>
                     <MenuItem>Nesta MarketPlace</MenuItem>
