@@ -30,8 +30,8 @@ const LogoLayout = styled.div`
     padding:5px;
     @media (max-width:600px){
         right: 20px;
-        height:62px;
-        max-height: 62px;
+        height:50px;
+        max-height: 50px;
         border-radius: 50px;
         margin-top: 0px;
         left: 10px;
@@ -68,8 +68,8 @@ const LogoLink = styled.img`
         position: absolute;
         left: 23px;
         top:13px;
-        width: 34px;
-        height: 34px;
+        width: 24px;
+        height: 30px;
     }
 `
 LogoLink.defaultProps = {

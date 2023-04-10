@@ -35,8 +35,10 @@ const StyledText = styled.p`
     line-height: 200%;
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};;
     @media (max-width: 600px) {
-      font-weight: 300;
-      font-size: 10px;
+      width: ${props => props.width ===undefined?"479px":props.width};
+      height: auto;
+      font-weight: 400;
+      font-size: 16px;
     }
 `
 
