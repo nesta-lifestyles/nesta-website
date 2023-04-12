@@ -37,7 +37,7 @@ const LogoLayout = styled.div`
         left: 10px;
         right: 10px;
         top: 11px;
-        background-color: #1B1E1E;
+        background-color: #1B1E1E; 
     }
 `
 export const Bars = styled.img`
@@ -57,6 +57,24 @@ export const Bars = styled.img`
   }
 `;
 
+const LogoForMobileLink = styled.img`
+    /* background-color:green; */
+    width: 38.8px;
+    height: 46px;
+    max-width: 38.8px;
+    max-height: 46px;
+    padding:5px;
+    display: none;
+    @media (max-width:600px){
+        display: block;
+        position: absolute;
+        left: 23px;
+        top:13px;
+        width: 24px;
+        height: 30px;
+    }
+`
+
 const LogoLink = styled.img`
     /* background-color:green; */
     width: 38.8px;
@@ -64,7 +82,9 @@ const LogoLink = styled.img`
     max-width: 38.8px;
     max-height: 46px;
     padding:5px;
+    
     @media (max-width:600px){
+        display: none;
         position: absolute;
         left: 23px;
         top:13px;
@@ -74,8 +94,15 @@ const LogoLink = styled.img`
 `
 LogoLink.defaultProps = {
     src: logoImage,
+    srcSet:`${{invertedLogoImage}} 600w, ${{invertedLogoImage}} 768w, ${{logoImage}} 1280w`,
+    sizes:"(max-width: 600px) 300px, (max-width: 768px) 768px, 1280px",
   };
   
+LogoForMobileLink.defaultProps = {
+    src: invertedLogoImage,
+  };
+  
+
 
 const MenuLink = styled.div`
     display: flex;
@@ -180,7 +207,8 @@ const Navbar=() => {
     return(<>
         <NavBar>
             <LogoLayout>
-                <LogoLink srcSet={`${invertedLogoImage} 300w, ${invertedLogoImage} 768w, ${invertedLogoImage} 1280w`} />
+                <LogoForMobileLink />
+                <LogoLink  />
             </LogoLayout>
             {/* <Bars onClick={NavBarHandler} /> */}
         {showNavBar && (<MenuLink className="menu-link">
