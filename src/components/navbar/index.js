@@ -195,6 +195,22 @@ const MenuItem = styled(Link)`
         }
         
 `
+const LogoItem = styled(Link)`
+    color: #878383;
+    flex: 1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-right: 40px;
+    flex-shrink: 1;
+    position: relative;
+    transition: all .35s  ease-out;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s; 
+    @media (max-width:600px) {            
+        margin: 10px;
+        color: #FFFFFF;
+    }`
 
 const Navbar=() => {
 
@@ -208,7 +224,7 @@ const Navbar=() => {
         <NavBar>
             <LogoLayout>
                 <LogoForMobileLink />
-                <LogoLink  />
+                <LogoItem to="/"><LogoLink  /></LogoItem>
             </LogoLayout>
             {/* <Bars onClick={NavBarHandler} /> */}
         {showNavBar && (<MenuLink className="menu-link">
