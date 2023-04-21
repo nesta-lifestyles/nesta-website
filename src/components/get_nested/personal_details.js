@@ -98,12 +98,14 @@ export const PersonalDetails = (props) => {
             <StyledContainer>
                 <NameInputTextBox style={getBorderStyle(props.isNameEmpty)} onChange={handleName} />
                     {props.isNameEmpty&&<ErrorText value="Please enter Name" 
+                    width="100%"
                         height="42px"
                         color="#D61B26"/>}
             </StyledContainer>
                 <StyledContainer>
                     <EmailInputTextBox style={getBorderStyle(props.isEmailEmpty)} onChange={handleEmail}/>
                     {(props.isEmailEmpty ) && <ErrorText value={errorForEmail}
+                    width="100%"
                     height="42px"
                     color="#D61B26"/>}
                 </StyledContainer>
@@ -112,7 +114,7 @@ export const PersonalDetails = (props) => {
             <StyledContainer>
                 <PhoneNumberInputTextBox style={getBorderStyle(props.isPhoneNumberEmpty)} phoneNumber={phoneNumber} HandleCountryCode={handleCountryCode} onChange={handlePhoneNumbers}/>
                     {(props.isPhoneNumberEmpty ) && <ErrorText value="Please enter Phone number"
-                        height="42px"
+                       width="100%" height="42px"
                     color="#D61B26"/>}
             </StyledContainer>      
             </RowContiner>
