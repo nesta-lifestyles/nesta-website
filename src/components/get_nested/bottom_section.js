@@ -18,8 +18,8 @@ export const BottomSection =(props)=> {
 
     return(
         <ButtonContainer>
-            <Button width="333px" height="53px" value="Submit" OnClick={props.onSubmit}/>
-            <RevertButton width="333px" height="53px" value="Cancel" OnClick={() => navigate(-1)} />
+            <Button width="100%" height="53px" value="Submit" OnClick={props.onSubmit}/>
+            <RevertButton width="100%" height="53px" value="Cancel" OnClick={() => navigate(-1)} />
         </ButtonContainer>
     )
 }

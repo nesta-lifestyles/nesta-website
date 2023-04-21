@@ -6,7 +6,6 @@ import React from "react"
 import { connect } from "react-redux"
 import { updateName } from "../reducer"
 import { BottomSection } from "./bottom_section"
-import { useNavigate } from "react-router-dom"
 
 
 const Divider = styled.div`
@@ -16,7 +15,7 @@ const Divider = styled.div`
     background-color: #F3F3F3;
     margin-top: 18px;
     @media (max-width: 600px) {
-        width: 333px;
+        width: 100%;
     }
     
 `
@@ -26,8 +25,10 @@ const GetNestedContainer = styled.div`
     height: 622px;
     padding: 27px;
     @media (max-width: 600px) {
-        width: 350px;
-        padding: 10px;
+        width: 100%;
+        padding: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
         /* padding-left: 24px; */
         /* margin-right: 24px; */
     }

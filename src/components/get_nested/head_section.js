@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
     align-items: center;
     justify-content: start;
     @media (max-width: 600px) {
-        width: 330px;
+        width: 100%;
     }
 `
 
@@ -26,7 +26,7 @@ const ButtonContainer = styled.div`
 const AlignEndContainer = styled.div`
     display: flex;
     margin-left: auto;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 `
 
 const title="We need few of your information to get started"
@@ -34,7 +34,7 @@ export const HeadSection = (props) => {
     const navigate = useNavigate();
 
     return(<HeaderContainer>
-            <Title value={title} height="64px" />
+            <Title value={title} width="100%" height="64px" />
             <AlignEndContainer>
                 <ButtonContainer>
                     <RevertButton width="98px" height="53px" value="Cancel" OnClick={() => navigate(-1)} />

@@ -18,7 +18,7 @@ const StyledInputTextBox = styled.input`
     vertical-align: top;
     box-sizing: border-box;
     @media (max-width: 600px) {
-        width: 333px;
+        width: 100%;
         
    }
     &:focus {
