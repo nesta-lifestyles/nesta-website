@@ -43,7 +43,7 @@ export const TextImageLayout = (props) => {
         <>
         <ImageTextTag>
                 <TextContainer>
-                    <Text value={props.text} />
+                    <Text value={props.text}  width="100%" />
                 </TextContainer>
                 <ImageContainer>
                     <Image src={props.image} width="100%" height="100%"/>

@@ -50,7 +50,7 @@ export const ImageTextLayout = (props) => {
                         <Image src={props.image} width="100%" height="100%"/>
                     </ImageContainer>
                     <TextContainer>
-                        <Text value={props.text} />
+                        <Text value={props.text}  width="100%" />
                     </TextContainer>
             </ImageTextTag>
         </>
@@ -66,7 +66,7 @@ export const ImageTextButtonLayout = (props) => {
                         <Image src={props.image} width="100%" height="100%"/>
                     </ImageContainer>
                     <TextContainer>
-                        <Text value={props.text} />
+                        <Text value={props.text} width="100%" />
                         <LinkAsButton value={props.buttonTitle}/>
                     </TextContainer>
             </ImageTextTag>       
