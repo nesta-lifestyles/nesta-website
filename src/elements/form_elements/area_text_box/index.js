@@ -27,7 +27,7 @@ const StyledAreaInputTextBox = styled.textarea`
         /* border-color: black; */
   }
   @media (max-width: 600px) {
-        width: 100%;
+        width: 333px;
         height: 128px;
    }
 `
@@ -54,7 +54,7 @@ const StyledInputTextBox = styled.input`
         /* border-color: black; */
   }
   @media (max-width: 600px) {
-        width: 100%;
+        width: 333px;
    }
 `
 

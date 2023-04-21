@@ -15,7 +15,7 @@ const Divider = styled.div`
     background-color: #F3F3F3;
     margin-top: 18px;
     @media (max-width: 600px) {
-        width: 100%;
+        width: 333px;
     }
     
 `
@@ -25,7 +25,7 @@ const GetNestedContainer = styled.div`
     height: 622px;
     padding: 27px;
     @media (max-width: 600px) {
-        width: 100%;
+        width: 333px;
         padding: 0px;
         margin-left: 10px;
         margin-right: 10px;
