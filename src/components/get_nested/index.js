@@ -6,6 +6,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { updateName } from "../reducer"
 import { BottomSection } from "./bottom_section"
+import { SubmitOverlay } from "./submit_overlay"
 
 
 const Divider = styled.div`
@@ -34,19 +35,34 @@ const GetNestedContainer = styled.div`
         /* margin-right: 24px; */
     }
 `
+
+const SubmittedOverlayContainer = styled.div`
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: 2;
+    cursor: pointer;
+    
+`
     
 
 class GetNested extends React.Component {
     constructor(props){
         super(props)
-        this.state={
+        this.state = {
             name:this.props.name,
             isNameEmpty: this.props.isNameEmpty,
-            email:this.props.email,
+            email: this.props.email,
             isEmailEmpty: this.props.isEmailEmpty,
             phoneNumber:this.props.phoneNumber,
             isPhoneNumberEmpty:this.props.isPhoneNumberEmpty,
-            
+            showSubmittedOverlay:this.props.showOverlay,
         }
     }
 
@@ -62,11 +78,9 @@ class GetNested extends React.Component {
             console.log("Handle Name Updating name"+this.state.name)
             const { dispatch } = this.props;                
             dispatch(updateName({ type: 'UPDATE_ISNAME_EMPTY', isNameEmpty:true}));
-        
+            return false
         } else {
-        
-            const { dispatch } = this.props;      
-            // dispatch(updateName({ type: 'UPDATE_ISNAME_EMPTY', isNameEmpty:false}));
+            return true
         }
     }
 
@@ -75,9 +89,9 @@ class GetNested extends React.Component {
             console.log("handle email updating"+this.state.email)
             const { dispatch } = this.props;                
             dispatch(updateName({ type: 'UPDATE_ISEMAIL_EMPTY', isEmailEmpty:true}));
-        
+            return false
         } else {
-        
+            return true
             const { dispatch } = this.props;      
             // dispatch(updateName({ type: 'UPDATE_ISEMAIL_EMPTY', isEmailEmpty:false}));
         }
@@ -87,8 +101,9 @@ class GetNested extends React.Component {
         if(this.isEmpty(this.state.phoneNumber)) {
             const { dispatch } = this.props;                
             dispatch(updateName({ type: 'UPDATE_IS_PHONE_NUMBER_EMPTY', isPhoneNumberEmpty:true}));
-        
-        }
+            return false
+        } 
+        return true
         //  else {
         //     const { dispatch } = this.props;      
         //     dispatch(updateName({ type: 'UPDATE_IS_PHONE_NUMBER_EMPTY', isPhoneNumberEmpty:false}));
@@ -99,12 +114,17 @@ class GetNested extends React.Component {
     handleSubmit=(e)=>{
         console.log("Handle Submit Here...!"+JSON.stringify(this.state))
         e.preventDefault();
-        this.handleName()
-        this.handleEmail()
-        this.handlePhoneNumber()
+        let isNameHandled = this.handleName()
+        let isEmailHandled = this.handleEmail()
+        let isPhoneNumberHandled = this.handlePhoneNumber()
+        const { dispatch } = this.props;
+        if(isNameHandled && isEmailHandled && isPhoneNumberHandled) {
+            dispatch(updateName({ type: 'CLEAR_GET_NESTED'}))
+            dispatch(updateName({ type: 'UPDATE_OVERLAY', showOverlay:true}));
+        }
     }
     
-    static getDerivedStateFromProps(props, state){
+    static getDerivedStateFromProps(props, state) {
         let newPhoneNumber = state.phoneNumber
         let newName = state.name
         let newEmail = state.email
@@ -127,7 +147,8 @@ class GetNested extends React.Component {
             email:newEmail,
             isEmailEmpty: props.isEmailEmpty,
             phoneNumber:newPhoneNumber,
-            isPhoneNumberEmpty: props.isPhoneNumberEmpty
+            isPhoneNumberEmpty: props.isPhoneNumberEmpty,
+            showSubmittedOverlay: props.showOverlay
         }
     }
     
@@ -138,6 +159,9 @@ class GetNested extends React.Component {
                     <PersonalDetails isNameEmpty={this.props.isNameEmpty} isEmailEmpty={this.props.isEmailEmpty} isPhoneNumberEmpty={this.props.isPhoneNumberEmpty}/>
                     <Details/>
                     <BottomSection onSubmit={this.handleSubmit}/>
+                 {this.state.showSubmittedOverlay && <SubmittedOverlayContainer>
+                        <SubmitOverlay/>
+                    </SubmittedOverlayContainer>}
                 </GetNestedContainer>)
     } 
 }
@@ -148,8 +172,10 @@ const mapStateToProps=(state)=> {
     const phoneNumber = state.getNested.phoneNumber;
     const isEmailEmpty= state.getNested.isEmailEmpty;
     const isPhoneNumberEmpty = state.getNested.isPhoneNumberEmpty;
+    const showOverlay = state.getNested.showOverlay
+
     return {
-        name,email,phoneNumber,isNameEmpty, isEmailEmpty,isPhoneNumberEmpty
+        name,email,phoneNumber,isNameEmpty, isEmailEmpty,isPhoneNumberEmpty, showOverlay
     };
 }
 export default connect(mapStateToProps)(GetNested)

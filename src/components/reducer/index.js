@@ -14,6 +14,7 @@ export const getNestedReducer = createSlice({
         carpetArea:"",
         agentCode:"",
         otherInfo:"",
+        showOverlay:false,
     },
     reducers:{
         updateName: (state, action) =>{
@@ -83,12 +84,38 @@ export const getNestedReducer = createSlice({
                 }
                 
                 case "UPDATE_IS_PHONE_NUMBER_EMPTY":{
-                    console.log("update empty phone number" + JSON.stringify(action))
+                    // console.log("update empty phone number" + JSON.stringify(action))
                     return {
                        ...state,
                        isPhoneNumberEmpty: action.payload.isPhoneNumberEmpty
                     }
                     break;
+                }
+
+                case "UPDATE_OVERLAY":{
+                    return {
+                        ...state,
+                        showOverlay: action.payload.showOverlay
+                     }
+                     break
+                }
+                
+                case "CLEAR_GET_NESTED":{
+                    return {
+                        name:"",
+                        isNameEmpty:false,
+                        email:"",
+                        isEmailEmpty:false,
+                        countryCode:"",
+                        phoneNumber:"",
+                        isPhoneNumberEmpty:false,
+                        address:"",
+                        carpetArea:"",
+                        agentCode:"",
+                        otherInfo:"",
+                        showOverlay:false,
+                    }
+                    break
                 }
 
                 default:

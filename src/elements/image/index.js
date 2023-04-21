@@ -23,6 +23,7 @@ const StyledDiv = styled.div`
     display: inline-block;
     overflow: hidden;   
     border-radius: 16px;
+    /* position: absolute; */
 `
 
 const ImageNotFound = "Image Not Found!!"

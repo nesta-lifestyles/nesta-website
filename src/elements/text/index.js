@@ -47,6 +47,34 @@ const StyledTitle = styled.div`
 /* } */
 `
 
+const StyledTextWith500Weight = styled.div`
+    position: relative;
+    width: ${props => props.width ===undefined?"479px":props.width};
+    height: ${props => props.height ===undefined?"45px":props.height};
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+    line-height: 100%;
+    color: ${props => props.color ===undefined?"#1B1E1E":props.color};
+    /* @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    } */
+/* } */
+@media (max-width: 600px) {
+        font-size: 21px;
+        color: #1B1E1E;
+        width: 245px;
+        height: 64px;
+    }
+`
+
 
 const StyledText = styled.p`
     width: ${props => props.width ===undefined?"479px":props.width};
@@ -92,4 +120,8 @@ export const Title = (props) => {
 
 export const Text = (props) => {
     return <StyledText width={props.width} height={props.height} color={props.color}>{props.value}</StyledText>
-} 
+}
+
+export const Text500Weight = (props) => {
+  return <StyledTextWith500Weight width={props.width} height={props.height} color={props.color}>{props.value}</StyledTextWith500Weight>
+}
