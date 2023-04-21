@@ -15,7 +15,7 @@ const Divider = styled.div`
     background-color: #F3F3F3;
     margin-top: 18px;
     @media (max-width: 600px) {
-        width: fit-content;
+        width: 100%;
     }
     
 `
