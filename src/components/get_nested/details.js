@@ -17,14 +17,14 @@ const RowContiner = styled.div`
 export const Details = () => {
     return(<>
             <RowContiner>
-                <AreaInputTextBox/>
+                <AreaInputTextBox placeholder="Site Address"/>
             </RowContiner>
-            <RowContiner>
+            {/* <RowContiner>
                 <CarpetAreaInputTextBox/>
                 <AgentCodeInputTextBox/>
-            </RowContiner>
+            </RowContiner> */}
             <RowContiner>
-                <OtherInfoInputTextBox/>
+                <AreaInputTextBox placeholder="Describe your requirement"/>
             </RowContiner>
          </>
 

@@ -49,22 +49,20 @@ const StyledInputTextBox = styled.input`
     vertical-align: top;
     box-sizing: border-box;
     &:focus {
-        /* border: 1px solid black; */
         outline: none;
-        /* border-color: black; */
-  }
-  @media (max-width: 600px) {
-        width: 100%;
-   }
+    }
+    @media (max-width: 600px) {
+            width: 100%;
+    }
 `
 
 
 
 
-export const AreaInputTextBox = () => {
+export const AreaInputTextBox = (props) => {
     return(
         <StyledAreaInputTextBox
-        placeholder="Site Address"/>
+        placeholder={props.placeholder}/>
     )
 }
 
@@ -78,14 +76,14 @@ export const CarpetAreaInputTextBox = () => {
 export const AgentCodeInputTextBox = () => {
     return(
         <StyledInputTextBox
-        placeholder="Agent Code"/>
+        placeholder="Referral Code"/>
     )
 }
 
 export const OtherInfoInputTextBox = () => {
     return(
         <StyledInputTextBox
-        placeholder="Other Info"/>
+        placeholder="Describe your requirement"/>
     )
 }
 

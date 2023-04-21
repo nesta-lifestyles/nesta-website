@@ -10,7 +10,7 @@ import { SubmitOverlay } from "./submit_overlay"
 
 
 const Divider = styled.div`
-    width: 834px;
+    width: 781px;
     height: 2px;
     border-radius: 16px;
     background-color: #F3F3F3;
@@ -22,7 +22,7 @@ const Divider = styled.div`
 `
 
 const GetNestedContainer = styled.div`
-    width: 834px;
+    width: 781px;
     height: 622px;
     padding: 27px;
     @media (max-width: 600px) {

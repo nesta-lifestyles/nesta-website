@@ -27,8 +27,8 @@ const EntirePageContainer = styled.div`
 
 const ContentContainer = styled.div`
     height: 100%;
-    /* height: fit-content;
-    width: fit-content; */
+    height: fit-content;
+    width: fit-content;
     margin-top: 100px;
     padding-top: 44px;
     padding-left: 72px; 

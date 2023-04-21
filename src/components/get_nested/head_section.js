@@ -6,10 +6,17 @@ import { useNavigate } from "react-router-dom"
 const HeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: start;
+    text-align: start;
     @media (max-width: 600px) {
         width: 100%;
+    }
+`
+const TitleContainer = styled.div`
+    display: flex;
+    padding-top: 20px;
+    text-align: center;
+    @media (max-width: 600px) {
+        padding-top: 0px;
     }
 `
 
@@ -34,7 +41,9 @@ export const HeadSection = (props) => {
     const navigate = useNavigate();
 
     return(<HeaderContainer>
-            <Title value={title} width="100%" height="64px" />
+            <TitleContainer>
+                <Title value={title} width="100%" height="64px" />
+            </TitleContainer>
             <AlignEndContainer>
                 <ButtonContainer>
                     <RevertButton width="98px" height="53px" value="Cancel" OnClick={() => navigate(-1)} />
