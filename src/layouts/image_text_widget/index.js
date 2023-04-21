@@ -2,6 +2,7 @@ import { H1, Text } from "../../elements/text"
 import React from 'react';
 import styled from "styled-components";
 import { Image } from "../../elements/image";
+import { Button, LinkAsButton } from "../../elements/button";
 
 const ImageTextTag = styled.div`
     display: flex;
@@ -29,9 +30,12 @@ const TextContainer = styled.div`
     height:"567px";
     flex:1;
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
     @media (max-width:600px){
         width:"100%";
         height:"100%";
@@ -41,14 +45,31 @@ const TextContainer = styled.div`
 export const ImageTextLayout = (props) => {
     return(
         <>
-        <ImageTextTag>
-                <ImageContainer>
-                    <Image src={props.image} width="100%" height="100%"/>
-                </ImageContainer>
-                <TextContainer>
-                    <Text value={props.text} />
-                </TextContainer>
-        </ImageTextTag>
+            <ImageTextTag>
+                    <ImageContainer>
+                        <Image src={props.image} width="100%" height="100%"/>
+                    </ImageContainer>
+                    <TextContainer>
+                        <Text value={props.text} />
+                    </TextContainer>
+            </ImageTextTag>
+        </>
+    )
+}
+
+
+export const ImageTextButtonLayout = (props) => {
+    return(
+        <>
+            <ImageTextTag>
+                    <ImageContainer>
+                        <Image src={props.image} width="100%" height="100%"/>
+                    </ImageContainer>
+                    <TextContainer>
+                        <Text value={props.text} />
+                        <LinkAsButton value={props.buttonTitle}/>
+                    </TextContainer>
+            </ImageTextTag>       
         </>
     )
 }

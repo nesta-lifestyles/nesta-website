@@ -25,6 +25,28 @@ const StyledH1 = styled.div`
     } */
 /* } */
 `
+const StyledTitle = styled.div`
+    position: relative;
+    width: ${props => props.width ===undefined?"479px":props.width};
+    height: ${props => props.height ===undefined?"45px":props.height};
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+    line-height: 100%;
+    color: ${props => props.color ===undefined?"#1B1E1E":props.color};
+    /* @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    } */
+/* } */
+`
+
 
 const StyledText = styled.p`
     width: ${props => props.width ===undefined?"479px":props.width};
@@ -63,6 +85,10 @@ const transitions = {
 export const H1 = (props) => {
     return <StyledH1 width={props.width} height={props.height} color={props.color}>{props.value}</StyledH1>
 }    
+
+export const Title = (props) => {
+  return <StyledTitle width={props.width} height={props.height} color={props.color}>{props.value}</StyledTitle>
+}
 
 export const Text = (props) => {
     return <StyledText width={props.width} height={props.height} color={props.color}>{props.value}</StyledText>

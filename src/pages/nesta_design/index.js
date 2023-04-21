@@ -2,7 +2,7 @@ import React from 'react';
 import { Banner } from '../../components/banner';
 import { TextImageLayout } from '../../layouts/text_image_layout';
 import { FullImageLayout } from '../../layouts/full_row_image_layout';
-import { ImageTextLayout } from '../../layouts/image_text_widget';
+import { ImageTextButtonLayout, ImageTextLayout } from '../../layouts/image_text_widget';
 import { OakSerenityImagesArray, OakSerenityTextArray, OakSerenityTitle } from './oak_serenity';
 import { TheWhiteOpulenceImageArray,TheWhiteOpulenceTextArray, Title } from './the_white_opulence';
 import { UrbanBastionImageArray, UrbanBastionTextArray, UrbanBastionTitle } from './urban_bastion';
@@ -76,7 +76,7 @@ class NestaDesign extends React.Component {
         return (
             <div>
                 <Banner title={this.state.title} src={this.state.imageArray[0]} animationflag = {this.state.index} OnPrevIndicatorClick={this.HandlePreviousDesign} onNextIndicatorClick={this.HandleNextDesign}/>
-                <ImageTextLayout image={this.state.imageArray[1]} text={this.state.textArray[0]}/>
+                <ImageTextButtonLayout image={this.state.imageArray[1]} text={this.state.textArray[0]} buttonTitle="Get your interiors"/>
                 <TextImageLayout text={this.state.textArray[1]} image={this.state.imageArray[2]}/>
                 <FullImageLayout image={this.state.imageArray[3]} />
                 <TextImageLayout text={this.state.textArray[2]} image={this.state.imageArray[4]}/>

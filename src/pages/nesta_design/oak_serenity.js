@@ -1,5 +1,5 @@
 import oak_serenity_banner from '../../images/designs/oak_serenity/lr/banner.jpg'
-import oak_serenity_image_1 from '../../images/designs/oak_serenity/lr/1.jpg'
+import oak_serenity_image_1 from '../../images/designs/oak_serenity/lr/1.gif'
 import oak_serenity_image_2 from '../../images/designs/oak_serenity/lr/2.jpg'
 import oak_serenity_image_3 from '../../images/designs/oak_serenity/lr/3.jpg'
 import oak_serenity_image_4 from '../../images/designs/oak_serenity/lr/4.jpg'
