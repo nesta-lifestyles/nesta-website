@@ -15,6 +15,7 @@ const EntirePageContainer = styled.div`
     /* width: 100%; */
     z-index: 1;
     height: 100%;
+    /* height: 100%; */
     overflow: scroll;
     background-color:#F5F5F5;
     @media (max-width:600px){
@@ -26,15 +27,24 @@ const EntirePageContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
+    /* height: 100%; */
     height: 100%;
-    height: fit-content;
     width: fit-content;
     margin-top: 100px;
-    padding-top: 44px;
-    padding-left: 72px; 
-    padding-right: 72px; 
+    /* padding-top: 72px; */
+    /* padding-left: 72px; 
+    padding-right: 72px;  */
     background-color: white;
     border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+    margin-bottom: 200px; 
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    ::-webkit-scrollbar{
+      display: none;
+    }
     
     z-index: 1;
     @media (max-width:600px){
@@ -44,8 +54,9 @@ const ContentContainer = styled.div`
       padding-top: 0px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 20px;
       height: auto;
-      padding-bottom: 120px;
+      padding-bottom: 0px;
       background-color: white;
     }
 `

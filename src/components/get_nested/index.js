@@ -14,7 +14,7 @@ const Divider = styled.div`
     height: 2px;
     border-radius: 16px;
     background-color: #F3F3F3;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     @media (max-width: 600px) {
         width: 100%;
     }
@@ -23,16 +23,19 @@ const Divider = styled.div`
 
 const GetNestedContainer = styled.div`
     width: 781px;
-    height: 622px;
-    padding: 27px;
+    height: 100%;
+    padding-left: 24px; 
+    padding-right: 24px; 
+    padding-top: 24px;
+    
+    
     @media (max-width: 600px) {
         width: fit-content;
         height: fit-content;
         padding: 0px;
         margin-left: 10px;
         margin-right: 10px;
-        /* padding-left: 24px; */
-        /* margin-right: 24px; */
+        overflow-y: scroll;
     }
 `
 

@@ -6,7 +6,30 @@ import { ImageTextButtonLayout, ImageTextLayout } from '../../layouts/image_text
 import { OakSerenityImagesArray, OakSerenityTextArray, OakSerenityTitle } from './oak_serenity';
 import { TheWhiteOpulenceImageArray,TheWhiteOpulenceTextArray, Title } from './the_white_opulence';
 import { UrbanBastionImageArray, UrbanBastionTextArray, UrbanBastionTitle } from './urban_bastion';
+import styled from 'styled-components';
 
+
+const DesignContainer = styled.div`
+    padding-top: 72px;
+    padding-left: 72px; 
+    padding-right: 72px;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    ::-webkit-scrollbar{
+      display: none;
+    } 
+    @media (max-width:600px){
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+      /* padding-top: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+      padding-bottom: 120px;
+      background-color: white; */
+    }
+`
 
 class NestaDesign extends React.Component {
     constructor(){
@@ -74,7 +97,7 @@ class NestaDesign extends React.Component {
     render(){
 
         return (
-            <div>
+            <DesignContainer>
                 <Banner title={this.state.title} src={this.state.imageArray[0]} animationflag = {this.state.index} OnPrevIndicatorClick={this.HandlePreviousDesign} onNextIndicatorClick={this.HandleNextDesign}/>
                 <ImageTextButtonLayout image={this.state.imageArray[1]} text={this.state.textArray[0]} buttonTitle="Get your interiors"/>
                 <TextImageLayout text={this.state.textArray[1]} image={this.state.imageArray[2]}/>
@@ -90,7 +113,7 @@ class NestaDesign extends React.Component {
                 <TextImageLayout text={this.state.textArray[7]} image={this.state.imageArray[11]}/>
                 <ImageTextLayout image={this.state.imageArray[12]} text={this.state.textArray[8]}/>
                 <FullImageLayout image={this.state.imageArray[13]} />
-            </div>
+            </DesignContainer>
         );
     }
 }
