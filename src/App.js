@@ -30,7 +30,7 @@ const ContentContainer = styled.div`
     /* height: 100%; */
     height: 100%;
     width: fit-content;
-    margin-top: 100px;
+    margin-top: 120px;
     /* padding-top: 72px; */
     /* padding-left: 72px; 
     padding-right: 72px;  */

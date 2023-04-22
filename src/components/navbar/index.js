@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import logoImage from '../../images/logo/logo.png'
+import logoImage from '../../images/logo/11_new.svg'
 import { NavLink as Link } from 'react-router-dom';
 import React, {useState }  from 'react';
 import menuBars from "../../images/menu/menu.png"
@@ -12,7 +12,7 @@ const NavBar = styled.nav`
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 120px;
     width: 100%;
     z-index: 1;
     left: 0;
@@ -25,7 +25,7 @@ const NavBar = styled.nav`
 const LogoLayout = styled.div`
     position: absolute;
     left:  45.6px;
-    height: 46px;
+    height: 100px;
     margin-top: 25px;
     padding:5px;
     @media (max-width:600px){
@@ -59,10 +59,10 @@ export const Bars = styled.img`
 
 const LogoForMobileLink = styled.img`
     /* background-color:green; */
-    width: 38.8px;
-    height: 46px;
-    max-width: 38.8px;
-    max-height: 46px;
+    width: 100px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 100px;
     padding:5px;
     display: none;
     @media (max-width:600px){
@@ -77,10 +77,10 @@ const LogoForMobileLink = styled.img`
 
 const LogoLink = styled.img`
     /* background-color:green; */
-    width: 38.8px;
-    height: 46px;
-    max-width: 38.8px;
-    max-height: 46px;
+    width: 40px;
+    height: 90px;
+    max-width: 50px;
+    max-height: 100px;
     padding:5px;
     
     @media (max-width:600px){
