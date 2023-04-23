@@ -8,6 +8,7 @@ const StyledImage = styled.img`
     height: ${props => props.height === undefined? "599px;" : props.height};
     max-width: ${props => props.width === undefined? "661px;" : props.width}; 
     max-height: ${props => props.height === undefined? "599px;" : props.height};
+    pointer-events: none;
     /* &:hover {
         transform: ${props => props.isTransformOnHover? "scale(1.2)" :" scale(1)"};
         transform-origin: ${props => props.isTransformOnHover?"50% 50%": "0% 0%"};       

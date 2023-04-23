@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import logoImage from '../../images/logo/11_new.svg'
+import logoImage from '../../images/logo/11.png'
 import { NavLink as Link } from 'react-router-dom';
 import React, {useState }  from 'react';
 import menuBars from "../../images/menu/menu.png"
@@ -78,7 +78,7 @@ const LogoForMobileLink = styled.img`
 const LogoLink = styled.img`
     /* background-color:green; */
     width: 40px;
-    height: 90px;
+    height: 70px;
     max-width: 50px;
     max-height: 100px;
     padding:5px;
