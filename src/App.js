@@ -9,6 +9,9 @@ import  GetNested  from './components/get_nested';
 import Geolocation from './components/geolocation';
 import Demo from './components/geolocation';
 import GetGeoLocation from './components/geolocation';
+import { Footer } from './components/footer';
+import { ContactUs } from './pages/contact_us';
+import { PrivacyPoilicyPage } from './pages/privacy_policy';
 const EntirePageContainer = styled.div`
     padding-left: 44px;
     padding-right: 44px; 
@@ -38,8 +41,8 @@ const ContentContainer = styled.div`
     border-radius: 16px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 40px;
-    margin-bottom: 200px; 
+    /* padding-bottom: 40px; */
+    /* margin-bottom: 20px;  */
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     ::-webkit-scrollbar{
@@ -70,14 +73,19 @@ function App() {
         <Navbar/>
        <ContentContainer>
           {/* <GetNested /> */}
-        <Routes>
+          <Routes>
               <Route path='/'  Component={NestaDesign} /> 
               <Route path='/design'  Component={NestaDesign} />
               <Route path='/ville'  Component={NestaVille} />
               <Route path='/get-nested' Component={GetNested}/>
+              <Route path='/contact-us' Component={ContactUs}/>
+              <Route path='/privacy' Component={PrivacyPoilicyPage}/>
           </Routes>     
+         
        </ContentContainer>
+       <Footer/>
        </Router>
+        
        </EntirePageContainer>
     </div>
   );

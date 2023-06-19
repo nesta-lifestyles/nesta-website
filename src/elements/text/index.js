@@ -25,16 +25,41 @@ const StyledH1 = styled.div`
     } */
 /* } */
 `
+const StyledResizableH1 = styled.div`
+    position: relative;
+    width: ${props => props.width ===undefined?"479px":props.width};
+    height: ${props => props.height ===undefined?"45px":props.height};
+    font-style: normal;
+    font-weight: 800;
+    font-size: ${props => props.size ===undefined?"30px":props.size};;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+    line-height: 45px;
+    opacity: 0.8;
+    color: ${props => props.color ===undefined?"#1B1E1E":props.color};
+    /* @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    } */
+/* } */
+`
+
+
 const StyledTitle = styled.div`
     position: relative;
     width: ${props => props.width ===undefined?"479px":props.width};
     height: ${props => props.height ===undefined?"45px":props.height};
     font-style: normal;
     font-weight: 500;
-    font-size: 21px;
+    font-size: ${props => props.size ===undefined?"21px":props.size};;
     word-wrap: break-word;
     overflow-wrap: break-word;
     /* animation: 1s ease-out 0s 1 slideInFromLeft; */
+    text-align: left;
     line-height: 100%;
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};
     /* @keyframes slideInFromLeft {
@@ -76,19 +101,19 @@ const StyledTextWith500Weight = styled.div`
 `
 
 
-const StyledText = styled.p`
+const StyledText = styled.div`
     width: ${props => props.width ===undefined?"479px":props.width};
     height: ${props => props.height ===undefined?"216px":props.height};
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 200%;
+    font-size: ${props => props.size ===undefined?"18px":props.size};;;
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};;
     @media (max-width: 600px) {
       width: ${props => props.width ===undefined?"479px":props.width};
       height: auto;
       font-weight: 400;
       font-size: 16px;
+      word-wrap: break-word;
     }
 `
 
@@ -114,12 +139,15 @@ export const H1 = (props) => {
     return <StyledH1 width={props.width} height={props.height} color={props.color}>{props.value}</StyledH1>
 }    
 
+export const H1WithSize = (props) => {
+  return <StyledResizableH1 width={props.width} height={props.height} size={props.size} color={props.color}>{props.value}</StyledResizableH1>
+}
 export const Title = (props) => {
-  return <StyledTitle width={props.width} height={props.height} color={props.color}>{props.value}</StyledTitle>
+  return <StyledTitle width={props.width} height={props.height} color={props.color} size={props.size}>{props.value}</StyledTitle>
 }
 
 export const Text = (props) => {
-    return <StyledText width={props.width} height={props.height} color={props.color}>{props.value}</StyledText>
+    return <StyledText width={props.width} height={props.height} color={props.color} size={props.size}>{props.value}</StyledText>
 }
 
 export const Text500Weight = (props) => {
