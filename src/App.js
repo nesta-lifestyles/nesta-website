@@ -53,7 +53,7 @@ const ContentContainer = styled.div`
     z-index: 1;
     padding-bottom: 40px;
     @media (max-width:600px){
-      margin-top: 100px;
+      margin-top: 150px;
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 0px;
