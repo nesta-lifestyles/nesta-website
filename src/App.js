@@ -12,6 +12,7 @@ import GetGeoLocation from './components/geolocation';
 import { Footer } from './components/footer';
 import { ContactUs } from './pages/contact_us';
 import { PrivacyPoilicyPage } from './pages/privacy_policy';
+import ScrollToTop from './scroll_to_top';
 const EntirePageContainer = styled.div`
     padding-left: 44px;
     padding-right: 44px; 
@@ -72,10 +73,12 @@ function App() {
     <div className="App">
        <EntirePageContainer>
        <Router>
+       <ScrollToTop/>
         <Navbar/>
        <ContentContainer>
           {/* <GetNested /> */}
           <Routes>
+              
               <Route path='/'  Component={NestaDesign} /> 
               <Route path='/design'  Component={NestaDesign} />
               <Route path='/ville'  Component={NestaVille} />
