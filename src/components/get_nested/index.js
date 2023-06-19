@@ -28,7 +28,7 @@ const GetNestedContainer = styled.div`
     padding-left: 24px; 
     padding-right: 24px; 
     padding-top: 24px;
-    padding-bottom: 40px;
+    
     
     
     @media (max-width: 600px) {

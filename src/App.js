@@ -37,6 +37,7 @@ const ContentContainer = styled.div`
     /* padding-top: 72px; */
     /* padding-left: 72px; 
     padding-right: 72px;  */
+    
     background-color: white;
     border-radius: 16px;
     margin-left: auto;
@@ -50,6 +51,7 @@ const ContentContainer = styled.div`
     }
     
     z-index: 1;
+    padding-bottom: 40px;
     @media (max-width:600px){
       margin-top: 100px;
       padding-left: 10px;
