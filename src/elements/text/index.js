@@ -1,21 +1,19 @@
 import styled from "styled-components";
-import { CSSTransition, SwitchTransition, Transition, TransitionGroup } from "react-transition-group";
-import { useRef, useState } from "react";
 import React from 'react';
 
 const StyledH1 = styled.div`
     position: relative;
-    width: ${props => props.width ===undefined?"479px":props.width};
-    height: ${props => props.height ===undefined?"45px":props.height};
+    width: ${props => props.width === undefined?"580px":props.width};
+    height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-    line-height: 45px;
-    opacity: 0.8;
+    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    font-size: 36px;
+    line-height: 38.4px;
+    /* opacity: 0.8; */
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};
+    @media (max-width:600px){
+     font-size: 20px;
+    }
     /* @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -25,18 +23,16 @@ const StyledH1 = styled.div`
     } */
 /* } */
 `
-const StyledResizableH1 = styled.div`
+
+const StyledH2 = styled.div`
     position: relative;
-    width: ${props => props.width ===undefined?"479px":props.width};
-    height: ${props => props.height ===undefined?"45px":props.height};
+    width: ${props => props.width === undefined?"580px":props.width};
+    height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: 800;
-    font-size: ${props => props.size ===undefined?"30px":props.size};;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-    line-height: 45px;
-    opacity: 0.8;
+    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    font-size: 24px;
+    line-height: 38.4px;
+    /* opacity: 0.8; */
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};
     /* @keyframes slideInFromLeft {
     0% {
@@ -46,21 +42,24 @@ const StyledResizableH1 = styled.div`
         transform: translateX(0);
     } */
 /* } */
+
+  @media (max-width:600px){
+     font-size: 16px;
+     line-height: 38.4px;
+  }
 `
 
 
-const StyledTitle = styled.div`
+const StyledH3 = styled.div`
     position: relative;
-    width: ${props => props.width ===undefined?"479px":props.width};
-    height: ${props => props.height ===undefined?"45px":props.height};
+    width: ${props => props.width === undefined?"580px":props.width};
+    height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: 500;
-    font-size: ${props => props.size ===undefined?"21px":props.size};;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-    text-align: left;
-    line-height: 100%;
+    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    font-size: 20px;
+    text-align: start;
+    line-height: 38.4px;
+    /* opacity: 0.8; */
     color: ${props => props.color ===undefined?"#1B1E1E":props.color};
     /* @keyframes slideInFromLeft {
     0% {
@@ -70,86 +69,71 @@ const StyledTitle = styled.div`
         transform: translateX(0);
     } */
 /* } */
+  @media (max-width:600px){
+       font-size: 16px;
+  }
+
 `
 
-const StyledTextWith500Weight = styled.div`
-    position: relative;
-    width: ${props => props.width ===undefined?"479px":props.width};
-    height: ${props => props.height ===undefined?"45px":props.height};
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* animation: 1s ease-out 0s 1 slideInFromLeft; */
-    line-height: 100%;
-    color: ${props => props.color ===undefined?"#1B1E1E":props.color};
-    /* @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    } */
-/* } */
-@media (max-width: 600px) {
-        font-size: 21px;
-        color: #1B1E1E;
-        width: 245px;
-        height: 64px;
-    }
-`
-
-
-const StyledText = styled.div`
-    width: ${props => props.width ===undefined?"479px":props.width};
-    height: ${props => props.height ===undefined?"216px":props.height};
+const StyledText = styled.p`
+    width: ${props => props.width === undefined?"479px":props.width};
+    height: ${props => props.height === undefined?"216px":props.height};
     font-style: normal;
     font-weight: 400;
-    font-size: ${props => props.size ===undefined?"18px":props.size};;;
-    color: ${props => props.color ===undefined?"#1B1E1E":props.color};;
+    font-size: 16px;
+    overflow: hidden;
+    -ms-wrap-flow: end;
+    margin: 0px;
+    /* text-align: left; */
+    color: ${props => props.color === undefined?"#1B1E1E":props.color};;
     @media (max-width: 600px) {
-      width: ${props => props.width ===undefined?"479px":props.width};
-      height: auto;
-      font-weight: 400;
+      font-weight: 300;
       font-size: 16px;
-      word-wrap: break-word;
+      margin: 0px;
     }
 `
 
-const transitions = {
-    entering: {
-      display: 'block'
-    },
-    entered: {
-      opacity: 1,
-      display: 'block'
-    },
-    exiting: {
-      opacity: 0,
-      display: 'block'
-    },
-    exited: {
-      opacity: '0',
-      display: 'none'
+
+const StyledSmallText = styled.p`
+    width: ${props => props.width === undefined?"479px":props.width};
+    height: ${props => props.height === undefined?"216px":props.height};
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    overflow: hidden;
+    -ms-wrap-flow: end;
+    align-items: start;
+    margin: 0px;
+    color: ${props => props.color === undefined?"#1B1E1E":props.color};;
+    @media (max-width: 600px) {
+      font-weight: 300;
+      font-size: 12px;
     }
-  };
+`
 
 export const H1 = (props) => {
-    return <StyledH1 width={props.width} height={props.height} color={props.color}>{props.value}</StyledH1>
+    return <StyledH1 width={props.width} height={props.height} color={props.color} weight={props.weight}> {props.value} </StyledH1>
 }    
 
-export const H1WithSize = (props) => {
-  return <StyledResizableH1 width={props.width} height={props.height} size={props.size} color={props.color}>{props.value}</StyledResizableH1>
-}
-export const Title = (props) => {
-  return <StyledTitle width={props.width} height={props.height} color={props.color} size={props.size}>{props.value}</StyledTitle>
-}
+export const H2 = (props) => {
+  return <StyledH2 width={props.width} height={props.height} color={props.color} weight={props.weight}> {props.children} </StyledH2>
+}    
+
+export const H3 = (props) => {
+  return <StyledH3 width={props.width} height={props.height} color={props.color} weight={props.weight}> {props.children} </StyledH3>
+}    
+
 
 export const Text = (props) => {
-    return <StyledText width={props.width} height={props.height} color={props.color} size={props.size}>{props.value}</StyledText>
-}
+    return <StyledText width={props.width} height={props.height} color={props.color}>{props.children} </StyledText>
+} 
 
-export const Text500Weight = (props) => {
-  return <StyledTextWith500Weight width={props.width} height={props.height} color={props.color}>{props.value}</StyledTextWith500Weight>
+export const MediumText = (props) => {
+  return <StyledText width={props.width} height={props.height} color={props.color}> {props.children} </StyledText>
+} 
+
+
+export const SmallText = (props) => {
+  return <StyledSmallText width={props.width} height={props.height} color={props.color}> {props.children} </StyledSmallText>
 }

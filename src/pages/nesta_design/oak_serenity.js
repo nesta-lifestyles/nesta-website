@@ -1,19 +1,19 @@
-import oak_serenity_banner from '../../images/designs/oak_serenity/lr/banner.jpg'
-import oak_serenity_image_1 from '../../images/designs/oak_serenity/lr/1.gif'
-import oak_serenity_image_2 from '../../images/designs/oak_serenity/lr/2.jpg'
-import oak_serenity_image_3 from '../../images/designs/oak_serenity/lr/3.jpg'
-import oak_serenity_image_4 from '../../images/designs/oak_serenity/lr/4.jpg'
-import oak_serenity_image_5 from '../../images/designs/oak_serenity/lr/5.jpg'
-import oak_serenity_image_6 from '../../images/designs/oak_serenity/lr/6.jpg'
-import oak_serenity_image_7 from '../../images/designs/oak_serenity/lr/7.jpg'
-import oak_serenity_image_8 from '../../images/designs/oak_serenity/lr/8.jpg'
-import oak_serenity_image_9 from '../../images/designs/oak_serenity/lr/9.jpg'
-import oak_serenity_image_10 from '../../images/designs/oak_serenity/lr/10.jpg'
-import oak_serenity_image_11 from '../../images/designs/oak_serenity/lr/11.jpg'
-import oak_serenity_image_12 from '../../images/designs/oak_serenity/lr/12.jpg'
-import oak_serenity_image_13 from '../../images/designs/oak_serenity/lr/13.jpg'
+import oak_serenity_banner from '../../images/designs/oak_serenity/banner.png'
+import oak_serenity_image_1 from '../../images/designs/oak_serenity/1.png'
+import oak_serenity_image_2 from '../../images/designs/oak_serenity/2.png'
+import oak_serenity_image_3 from '../../images/designs/oak_serenity/3.png'
+import oak_serenity_image_4 from '../../images/designs/oak_serenity/4.png'
+import oak_serenity_image_5 from '../../images/designs/oak_serenity/5.png'
+import oak_serenity_image_6 from '../../images/designs/oak_serenity/6.png'
+import oak_serenity_image_7 from '../../images/designs/oak_serenity/7.png'
+import oak_serenity_image_8 from '../../images/designs/oak_serenity/8.png'
+import oak_serenity_image_9 from '../../images/designs/oak_serenity/9.png'
+import oak_serenity_image_10 from '../../images/designs/oak_serenity/10.png'
+import oak_serenity_image_11 from '../../images/designs/oak_serenity/11.png'
+import oak_serenity_image_12 from '../../images/designs/oak_serenity/12.png'
+import oak_serenity_image_13 from '../../images/designs/oak_serenity/13.png'
 
-const oak_serenity_text1 = "Are you ready to discover a way of living that is both peaceful and purposeful? Look no further than the Zen lifestyle - a philosophy that encourages mindfulness, simplicity, and a deep appreciation for the present moment."
+const oak_serenity_text1 = "Are you ready to discover a way of living that is both peaceful and purposeful? Look no further than the Zen lifestyle - a philosophy that encourages mindfulness, simplicity, and a deep appreciation for the present moment.Get your interiors"
 const oak_serenity_text2 = "The double height space with its warm wooden textures is an embodiment of the Zen lifestyle. This design aesthetic draws inspiration from the natural world, and it aims to create a space that feels calm and inviting. With its tall ceilings and open layout, this space is perfect for those who want to cultivate a sense of peace and tranquility in their daily lives."
 const  oak_serenity_text4="The key elements of the Zen lifestyle is the use of natural materials, such as wood and stone. These materials create a warm and inviting atmosphere, which is conducive to relaxation and mindfulness. The double height space uses wood in a variety of ways, from the exposed ceiling beams to the wooden floors and walls. The result is a space that feels both modern and timeless, with a strong connection to nature."
 const  oak_serenity_text5="If you're looking to create a serene and calming space in your home, a bedroom with minimalist wood and Zen principles is an ideal choice. The combination of natural materials and a minimalist design creates a space that is both calming and energizing, providing the perfect environment for rest and relaxation."
@@ -52,4 +52,4 @@ export const OakSerenityTextArray = [
     oak_serenity_text12,
 ]
 
-export const OakSerenityTitle = "Oak Serenity"
+export const OakSerenityTitle = "Lorem Ipsum is simply dummy text of the printing and typesetting industry."

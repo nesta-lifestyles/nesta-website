@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import nextImage from './Vector-1.png'
+import nextImage from './arrow-right.svg'
 import React from 'react';
 
 const StyledDiv = styled.div`
@@ -14,8 +14,9 @@ const StyledDiv = styled.div`
     cursor: pointer;
     border-radius: 80px;
     transition: 0.35s;
-    opacity: 0.4;
+    /* opacity: 0.4; */
     transform: scale(1);
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5); 
     @media (max-width:600px){
         width: 50px;
         max-width: 50px;
@@ -34,10 +35,10 @@ const StyledDiv = styled.div`
 
 const StyledAnchor = styled.img`
     position: relative;
-    width: 12px;
-    max-width: 12px;
-    max-height: 24px;;
-    height: 24px;
+    width: 34px;
+    max-width: 34px;
+    max-height: 34px;;
+    height: 34px;
     background: #FFFFFF;
     cursor: pointer;
     border-radius: 80px;

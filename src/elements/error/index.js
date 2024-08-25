@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import alertImage from '../../images/alert/alert-circle.svg'
+import alertImage from "../../images/icons/alert-circle.svg"
+import React from "react"
 
 const AlertTag = styled.div`
     width: 20px;
