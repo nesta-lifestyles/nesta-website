@@ -52,7 +52,7 @@ const TitleContainer = styled.div`
   width: 100%;
   bottom: 50%;
   @media (max-width: 600px) {
-    top: 50%;
+    top: 60%;
     left: 1%;
     height: auto;
     gap: 5px;
