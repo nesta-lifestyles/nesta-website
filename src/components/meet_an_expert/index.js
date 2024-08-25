@@ -45,8 +45,7 @@ export default function MeetAnExpert(props) {
 
 const Div = styled.div`
   background-color: #141414;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px;
   overflow: hidden;
 `;
 
