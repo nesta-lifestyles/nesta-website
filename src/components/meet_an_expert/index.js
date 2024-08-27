@@ -21,7 +21,6 @@ export default function MeetAnExpert(props) {
         dispatch(openOverlay())
   }
 
-  console.log("MEET AN EXPERT DATA - "+JSON.stringify(props))
   return (
     <Div>
       <Div2>

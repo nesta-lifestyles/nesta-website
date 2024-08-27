@@ -33,7 +33,6 @@ const StyledCartImage = styled.img`
 
 
 const StyledDiv = styled.div`
-    ${console.log("Called inside the styled DIV TAG")}
     /* width: ${props => props.width === undefined? "661px;" : props.width}; 
     height: ${props => props.height === undefined? "599px;" : props.height};
     max-width: ${props => props.width === undefined? "661px;" : props.width}; 

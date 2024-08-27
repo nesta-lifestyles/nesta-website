@@ -43,7 +43,6 @@ class NestaDesignFlorence extends React.Component {
 
     render(){
         const contactUsHandler = (props) => {
-            console.log("CONTACT US CALLED")
             const { openOverlay } = this.props;                
             openOverlay();
         }

@@ -71,7 +71,6 @@ class NestaDesign extends React.Component {
     ]
     
     HandlePreviousDesign = (props) => {
-            console.log("Previous Indicator Button clicked...!")
             var currentIndex =  this.state.index;
             var previousIndex = 3;
             if(currentIndex === 0) {
@@ -88,7 +87,6 @@ class NestaDesign extends React.Component {
     }   
 
     HandleNextDesign = (props) => {
-        console.log("Handle Next Indicator Button clicked...!")
         var currentIndex = this.state.index;
         var nextIndex = 0
         if(currentIndex === 2) {

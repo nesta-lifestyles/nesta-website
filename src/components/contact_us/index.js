@@ -58,12 +58,10 @@ export const ContactUs = (props) => {
     const onSubmit = async(data) => {
         try{
             await contactUsApi(data)
-            console.log('Form submitted:', data);
             updateSubmitSpinner(false)
             updateFormSuccess(true)
             
         } catch(err){
-            console.log('Error on Form submit:', err);
             updateSubmitSpinner(false)
             updateFormSuccess(true)
         }
@@ -97,13 +95,11 @@ export const RequestForQuote = (props) => {
     const onSubmit = async(data) => {
         try{
             await contactUsApi(data)
-            console.log('Form submitted:', data);
             updateSubmitSpinner(false)
             updateFormSuccess(true)
             clearTheCart();
             
         } catch(err){
-            console.log('Error on Form submit:', err);
             updateSubmitSpinner(false)
             updateFormSuccess(true)
             clearTheCart();

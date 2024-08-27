@@ -63,10 +63,8 @@ export const onSubmitPersonalDetailsValidations = (values) => {
 
 export const PersonalDetails = (props) => {
     const { formErrors, formData} = useContext(FormContext);
-    console.log("FORM ERRORS", formErrors)
-
+ 
     const updateToContext = (jsonPartOfPersonalDetails) => {
-        console.log("PART OF Personal DETAILS", jsonPartOfPersonalDetails)
         const updatedFormData = {...formData, personalDetails:{...formData.personalDetails, ...jsonPartOfPersonalDetails}}
         props.onChange(updatedFormData)
     }

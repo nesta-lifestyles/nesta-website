@@ -10,14 +10,11 @@ export const useForm = (initialValues, onSubmitValidations) =>{
         setFormData(initialValues);
     }, []);
 
-    console.log("form Data after setting initial values", formData)
 
     const handleOnChange = (updatedFormData) => {
-        console.log("VALUE onchange has been called, ", updatedFormData)
         setFormData(updatedFormData);
         if (useOnChangeValidations && onSubmitValidations) {
             const errors = onSubmitValidations(formData);
-            console.log("Errors", errors)
             setFormErrors(errors);
         }
     }
@@ -36,9 +33,7 @@ export const useForm = (initialValues, onSubmitValidations) =>{
                 if(!isPositive(errors)) {
                     setOnChangeValidations(true)
                     setFormErrors(errors);
-                    console.log("ONSUBMIT VALIDATIONS RESULT", errors)
                 } else {
-                    console.log("FORM DATA BEFORE SUBMITTING", formData)
                     updateSubmitSpinner(true)
                     onSubmit(formData)
                 }

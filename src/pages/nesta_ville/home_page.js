@@ -37,15 +37,12 @@ const Container = styled.div`
     } 
 `
 const HandlePreviousDesign = (props) => {
-    console.log("Previous Indicator Button clicked...!")
 }   
 
 const HandleNextDesign = (props) => {
-    console.log("Handle Next Indicator Button clicked...!")
 }
 
 const getImage=()=>{
-    console.log("Is Mobile"+isMobile) 
     if(isMobile) {
         return processImage
     }
@@ -65,7 +62,6 @@ class NestaVilleHomePage extends React.Component{
     }
 
     updateOverlayState = () => {
-        console.log("Before us clicked..."+this.state.showOverlay)
         
         this.setState({ 
             showOverlay: !this.state.showOverlay,
@@ -76,7 +72,6 @@ class NestaVilleHomePage extends React.Component{
 
     scrollToSection = (sectionRef, sectionId) => {
         window.history.pushState(null, null, `#${sectionId}`);
-        console.log("SCROLL TO SECTIONS"+sectionRef)
         window.scrollTo({
             top: sectionRef.current.offsetTop,
             behavior: 'smooth',

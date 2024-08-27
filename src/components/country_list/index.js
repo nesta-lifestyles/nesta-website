@@ -9,8 +9,6 @@ export const CountrySelector = () =>{
   const options = useMemo(() => countryList().getData(), [])
 
   const changeHandler = value => {
-    console.log("VALUE OF SELECTED COUNTRY", value)
-    console.log("VALUE OF SELECTED COUNTRY", value.val)
     setValue(value)
   }
 
@@ -32,7 +30,7 @@ export const getListCountryCodeAndPhoneCode = (countryCode)=>{
                 let countryCode = getCountryCallingCode(country.value)
                 // console.log("COUNTRY CODE 2", country)
                 if(currentCountryCode === "+"+countryCode) {
-                    console.log("LOCAL COUNTRY CODE", currentCountryCode, "COUNTRY CODE", countryCode)    
+                    // console.log("LOCAL COUNTRY CODE", currentCountryCode, "COUNTRY CODE", countryCode)    
                     returnList.push({"phoneCode":countryCode, "label":country.label, "countryCode":country.value, "autoSelect":true})    
                 } else {
                     returnList.push({"phoneCode":countryCode, "label":country.label, "countryCode":country.value, "autoSelect":false})
@@ -40,7 +38,7 @@ export const getListCountryCodeAndPhoneCode = (countryCode)=>{
             }
         }
         }) 
-    console.log("RETURNING LIST");
+    // console.log("RETURNING LIST");
     // getCountries().forEach(code =>returnList.push(getCountryFlag(code)+" +"+getCountryCallingCode(code)))
     return returnList
 }
@@ -69,10 +67,10 @@ export const formatPhoneNumber1 = (countryCode, phoneNumber) =>{
 
 export const CountryPhoneCodeSelector = () => {
     const [value, setValue] = useState('')
-    console.log("PHONE VALUE OF SELECTED COUNTRY", value)
+    // console.log("PHONE VALUE OF SELECTED COUNTRY", value)
     const changeHandler = value => {
         console.log(getCountryCallingCode('IN'))
-        console.log(" PHONE VALUE OF SELECTED COUNTRY", value)
+        // console.log(" PHONE VALUE OF SELECTED COUNTRY", value)
         // console.log("PHONE VALUE OF SELECTED COUNTRY", value.val)
         setValue(value)
       }

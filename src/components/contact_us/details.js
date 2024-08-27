@@ -99,7 +99,6 @@ export const Details = (props) => {
     const [isNestaVilleSelectorVisible, updateNestaVilleSelectorVisible] = useState(true)
     const [isNestaDecor, updateNestaDecor] = useState(false)
     const updateToContext = (jsonPartOfProjectDetails) => {
-        console.log("PART OF Project DETAILS", jsonPartOfProjectDetails)
         const updatedFormData = {...formData, projectDetails:{...formData.projectDetails, ...jsonPartOfProjectDetails}}
         props.onChange(updatedFormData)
     }
@@ -127,7 +126,6 @@ export const Details = (props) => {
         updateNestaVilleSelectorVisible(true)
         updateNestaDesignSelectorVisible(false)
         updateNestaDecor(false)
-        console.log("SELECTED OPTION", getIndex(NestaVilleData.options, getNestaVilleName(location)))
         updateToContext({'nestaVilleList':[NestaVilleData.options[getIndex(NestaVilleData.options, getNestaVilleName(location))]],
             'nestaDesignList':[],
         });

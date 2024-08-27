@@ -18,14 +18,14 @@ export default function Footer() {
           <Column>
               <Div5>
                 <Div6>PRODUCTS</Div6>
-                <Div7 to="/ville">NestaVille</Div7>
+                <Div7 to="/ville">Nestaville</Div7>
                 <Div7 to="/design">Nesta Design </Div7>
                 <Div7 to="/decor">Nesta Decor</Div7>
               </Div5>
             </Column>
             <Column>
               <Div5>
-                <Div6>NESTA VILLE</Div6>
+                <Div6>NESTAVILLE</Div6>
                 <Div7 to="/ville/weimar">Weimar</Div7>
                 <Div7 to="/ville/essence">Essence</Div7>
                 <Div7 to="/ville/classica">Classica</Div7>

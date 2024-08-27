@@ -238,7 +238,6 @@ export const ProductInfo = (props) => {
     const navigate = useNavigate();
     
     const handleClick = (index) => {
-        console.log("CLICKED ON EXPLORE MODELS")
         navigate(props.product_info[index].path)
     };
 

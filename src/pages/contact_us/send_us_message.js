@@ -66,7 +66,6 @@ export const SendUsAMessage = (props) => {
     const { isSuccess}= useContext(FormContext) 
 
     const handleCancelButton =()=> {
-        console.log("Cancel button clicked...!!")
         var cancelButton = document.getElementById("overlay_container")
         if(cancelButton){
             cancelButton.style.display="none";

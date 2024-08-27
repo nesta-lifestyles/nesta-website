@@ -5,7 +5,7 @@ export const DecorImageComponent = (props) => {
         const [selectedIndex, updateSelectedImageIndex] = useState(0);
 
         const handleToUpdateSelectedImageIndex=(index) => {
-            console.log("HANDLE TO UPDATE IMAGE IS CALLED")
+            // console.log("HANDLE TO UPDATE IMAGE IS CALLED")
             updateSelectedImageIndex(index)
         }
 

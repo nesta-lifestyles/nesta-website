@@ -11,7 +11,6 @@ export const overlayReducer = createSlice({
     initialState,
     reducers:{
         openOverlay : (state) =>{
-            console.log("OPEN OVERLAY CALLED")
             return{...state,
                 isShowOverlay :true
             } 

@@ -182,7 +182,6 @@ export const GalleryLayout = (props) =>{
             firstImage.style.border = '2px solid #DCDCDC'
         } else {
                 if(firstImage){
-                    console.log("firstImage Style"+firstImage)
                     firstImage.style.boxShadow='none'; 
                     firstImage.style.border='none'; 
                 }
@@ -307,7 +306,6 @@ export const GalleryLayout2 = (props) =>{
     const [activeIndex, updateActiveIndex] = useState(1)
     
     const updateActiveIndexValue = (index) =>{
-        console.log("UPDATE ACTIVE INDEX VALUE " + index)
         updateActiveIndex(index)
     }
 

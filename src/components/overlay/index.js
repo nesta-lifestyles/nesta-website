@@ -10,7 +10,6 @@ import { FormContextProvider } from "../../pages/contact_us/form_context"
 
 export const OverlayScreen = () => {
     const showOverlay = useSelector(state=>state.showOverlayState.isShowOverlay)
-    console.log("showOverlay Value : =" + showOverlay)
     const[currentOverlay, updateCurrentOverlay] = useState("overlay1")
 
     
@@ -23,7 +22,6 @@ export const OverlayScreen = () => {
     // }
 
     const switchOverlay = (overlay) => {
-        console.log("SWITCH OVERLAY CALLED")
         window.history.pushState(null, null, `#some`);
         // updateOverlay(false)
         updateCurrentOverlay(overlay)
@@ -49,7 +47,6 @@ export const OverlayScreen = () => {
     const contactUsHandler = (props) => {
        updateCurrentOverlay("overlay1")
        dispatch(closeOverlay());
-       console.log("After us clicked..."+showOverlay)
        if(!showOverlay){
                document.body.classList.add('no-scroll')
        } else {

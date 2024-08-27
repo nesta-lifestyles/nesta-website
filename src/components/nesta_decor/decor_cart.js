@@ -8,7 +8,7 @@ export const DecorCartComponent = () => {
     const navigate = useNavigate();
     
     const handleCheckoutClick = (name) =>{
-        console.log("CLICKED ON CART ICON")
+        // console.log("CLICKED ON CART ICON")
         navigate('/decor/cart/checkout')
     }
 

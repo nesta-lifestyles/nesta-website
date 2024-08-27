@@ -34,7 +34,7 @@ export const NestaDecorItemList = (props) =>{
             return
         }
         let filteredDecorItems = getByDecorTypeFilter(filterName) 
-        console.log("UPDAE DECORE ITEM CALLED, after filter", filteredDecorItems)
+        // console.log("UPDAE DECORE ITEM CALLED, after filter", filteredDecorItems)
         updateLocalDecoreItems(filteredDecorItems)   
     }
     

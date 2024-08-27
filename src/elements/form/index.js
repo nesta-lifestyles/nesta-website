@@ -187,7 +187,6 @@ export const LocalPhoneInput = (props) =>{
     }
 
     const handleSelectOnClick = () =>{
-        console.log("FIRST COUNTRY LIST",countryList[0])
         const selectElement = document.getElementById("mySelect");
         // selectElement.style.fontSize = '16px';
         selectElement.style.fontStyle = 'Poppins';

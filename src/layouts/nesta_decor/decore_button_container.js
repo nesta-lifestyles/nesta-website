@@ -54,7 +54,6 @@ export const ButtonContainerRounded = (props) => {
     }
 
     const getCount = () => {
-        console.log("CALLED FOR GET COUNT ", cart)
         if(cart.get(props.decorItem.code)) {
             // console.log("LET THE GET COUNT ", cart.get(props.decorItem.code))
             return cart.get(props.decorItem.code).count

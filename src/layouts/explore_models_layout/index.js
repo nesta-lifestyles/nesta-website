@@ -69,7 +69,6 @@ const GalleryTitleContainer = styled.div`
 
 
 export const ExploreModelsLayout = (props) => {
-    console.log("PROPS"+JSON.stringify(props.reff))
     const all = "View All"
     const less = "View Less"
     const [isDisabled, setIsDisabled] = useState(false);

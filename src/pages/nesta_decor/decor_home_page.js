@@ -17,7 +17,6 @@ export const NestaDecorHomePage = () =>{
     
     updateDecorItems(NestaDecorData.decorItems)
     
-    console.log("NESTE DECORE HOME PAGE")
     const dispatch = useDispatch();
     const contactUsHandler = (props) => {
         dispatch(openOverlay())

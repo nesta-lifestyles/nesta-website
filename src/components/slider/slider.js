@@ -42,8 +42,6 @@ export class Slider extends React.Component {
    
     handlePreviousClick() {
         const previous = this.state.current - 1
-        console.log("previous button clicked...!!!" +previous)
-        console.log("previous button clicked...!!!" +previous)
         this.setState({ 
             current: (previous < 0) 
               ? 3 - 1
@@ -54,7 +52,6 @@ export class Slider extends React.Component {
     }
 
     handleNextClick() {
-        console.log("next button clicked...!!!")
         const next = this.state.current + 1;
     
         this.setState({ 

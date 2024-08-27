@@ -2,7 +2,6 @@
 
 
 export const isUrlBelongsNestaDesign = (url) => {
-    console.log("URL ", url)
     if(url.pathname.includes("/design")) {
         return true
     }
@@ -10,7 +9,6 @@ export const isUrlBelongsNestaDesign = (url) => {
 }
 
 export const isUrlBelongsNestaDecor = (url) => {
-    console.log("URL ", url)
     if(url.pathname.includes("/decor")) {
         return true
     }
@@ -20,7 +18,6 @@ export const isUrlBelongsNestaDecor = (url) => {
 export const getNestaDesignName = (url) => {
     if(url.pathname.includes("/design")) {
         if(url.pathname.split("/").length>1) {
-            console.log("Design Name ", url.pathname.split("/")[url.pathname.split("/").length-1])
             return url.pathname.split("/")[url.pathname.split("/").length-1]
         }
         return undefined
@@ -39,7 +36,6 @@ export const isUrlBelongsNestaVille = (url) => {
 export const getNestaVilleName = (url) => {
     if(url.pathname.includes("/ville")) {
         if(url.pathname.split("/").length>1) {
-            console.log("Ville Name ", url.pathname.split("/")[url.pathname.split("/").length-1])
             return url.pathname.split("/")[url.pathname.split("/").length-1]
         }
         return undefined

@@ -97,7 +97,6 @@ export const WhiteButton = (props) => {
 
 
 export const Button = (props)=> {
-    console.log("ONCLICK"+props.onClick)
     return <StyledButton width={props.width} height={props.height} onClick={props.OnClick}> {props.value} </StyledButton>
 }
 

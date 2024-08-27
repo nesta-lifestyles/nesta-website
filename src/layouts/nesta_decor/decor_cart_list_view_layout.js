@@ -68,7 +68,6 @@ export const DecorCartCheckoutLayout = () => {
     }
 
     const handleRemoveDecoreItem = (product) => {
-        console.log("HANDLE REMOVE DECORE ITEM",product)
         updateToCart(product, 0)
     }
 

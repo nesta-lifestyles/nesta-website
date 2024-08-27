@@ -72,7 +72,6 @@ export const ProjectaAddressDetails = (props) => {
     // }
 
     const updateToContext = (jsonPartOfProjectDetails) => {
-        console.log("PART OF Personal DETAILS", jsonPartOfProjectDetails)
         const updatedFormData = {...formData, projectAddress:{...formData.projectAddress, ...jsonPartOfProjectDetails}}
         props.onChange(updatedFormData)
     }

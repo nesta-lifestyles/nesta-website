@@ -15,7 +15,6 @@ export const NestaDecorCartProvider = ({ children }) => {
     const uniqueId = uuidv4();
     
     const addToCart = (product) => {    
-     console.log("Called for adding into Cart",product) 
       product = {
         ...product,
         "id":uniqueId,
@@ -39,7 +38,6 @@ export const NestaDecorCartProvider = ({ children }) => {
             return newCart;
         });
      }
-     console.log("Cart After add ",product, "into cart:::", cart) 
     };
 
     const updateToCart = (product, count) => {
@@ -78,15 +76,11 @@ export const NestaDecorCartProvider = ({ children }) => {
 
 
     useEffect(() => {
-        console.log("Cart updated:", cart);
         // Perform other side effects here if needed
       }, [cart]);
     
     const getCountOf = (product) => {
-        console.log("Called for GetCount of into CART::: ",product) 
-        console.log("Called for GetCount of into Product::: ",product) 
         var productFromCart =  cart.get(product.code)
-        console.log("Product From Cart::: ",productFromCart) 
         if(productFromCart)  {
             return productFromCart.count
         }
@@ -109,14 +103,12 @@ export const NestaDecorCartProvider = ({ children }) => {
     };
 
     const getTotalCount =() =>{
-        console.log("Called for get Total Count",cart) 
         var count  = 0
         cart.forEach((value, key) =>{
             // console.log("Value from the MAP ::: ",value)
             // console.log("key from the MAP ::: ",key)
             count += value.count
         })
-        console.log("Total Count ::: ",count)
         return count;
     }
   
