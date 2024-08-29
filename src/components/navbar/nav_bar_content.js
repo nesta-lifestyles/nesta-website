@@ -9,7 +9,7 @@
 
 
 import ville102 from "../../images/ville/102/banner.avif"
-import ville200 from "../../images/ville/200/banner.avif"
+import ville200 from "../../images/ville/200/banner_1.avif"
 import ville201 from "../../images/ville/201/banner.avif"
 import ville202 from "../../images/ville/202/banner.avif"
 import ville203 from "../../images/ville/203/banner.avif"

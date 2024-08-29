@@ -44,7 +44,7 @@ const StyledInputTextBox2 = styled.input`
     height: 100%;
     border-radius: 8px;
     fill: Solid black;
-    opacity: 0.5;
+    opacity: 1;
     background-color: #767676;
     padding-left: 10px;
     font-style: Regular;
@@ -56,8 +56,8 @@ const StyledInputTextBox2 = styled.input`
     vertical-align: top;
     box-sizing: border-box;
     ::placeholder {
-        color: #767676;
-        opacity: 1; /* Firefox */
+        color: black;
+        opacity: 0.5; /* Firefox */
     }
 
     @media (max-width: 600px) {
@@ -107,7 +107,9 @@ export const InputTextBox = (props) => {
 }
 
 export const InputTextBoxEmail = (props) => {
-    return(<StyledInputTextBox2 width={props.width} placeholder={props.placeholder} onChange={props.onChange} />)
+    return(<StyledInputTextBox2 width={props.width} 
+        disabled={props.disabled}
+        placeholder={props.placeholder} onChange={props.onChange} />)
 }
 
 

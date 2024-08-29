@@ -64,6 +64,7 @@ const LogoLayout = styled(Link)`
         background-color: #1B1E1E;
     }
 `
+
 const LogoLayout2 = styled(Link)`
     left:  45.6px;
     height: 46px;
