@@ -83,6 +83,19 @@ const LogoLayout2 = styled(Link)`
         /* background-color: #1B1E1E; */
     }
 `
+const LogoLayout3 = styled(Link)`
+    @media (max-width:600px){
+        right: 20px;
+        height:50px;
+        margin-right: 70px;
+        max-height: 50px;
+        border-radius: 50px;
+        margin-top: 0px;
+        left: 10px;
+        top: 11px;
+        /* background-color: #1B1E1E; */
+    }
+`
 
 
 
@@ -400,7 +413,9 @@ const Navbar=() => {
     return(<>
         <NavBar>
             <Container>
-                <LogoLink3 src={whiteLogo} />
+                <LogoLayout3 to="/">
+                    <LogoLink3 src={whiteLogo} />
+                </LogoLayout3>
                 <Bars src={menuBars} onClick={NavBarHandler} />
             </Container>
            {showNavBar && 

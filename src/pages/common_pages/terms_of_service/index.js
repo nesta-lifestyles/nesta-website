@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { PrivacyPolicyContent } from "./content";
+import { TermsOfServiceContent } from "./content";
 import React from "react";
-import { MainContainerDiv } from "../../App";
+import { MainContainerDiv } from "../../../App";
 
 const Container = styled.div`
     /* margin-left: 70px;
@@ -22,10 +22,10 @@ const Container = styled.div`
 `
 
 
-export const PrivacyPolicy = () =>{
+export const TermsOfService = () =>{
     return(<MainContainerDiv>
                 <Container>
-                    <PrivacyPolicyContent/>
+                    <TermsOfServiceContent/>
                 </Container>
         </MainContainerDiv>)
 }

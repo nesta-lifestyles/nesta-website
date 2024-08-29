@@ -29,7 +29,7 @@ export const PrivacyPolicyContent = () =>{
 </ul>
 <p class="p2">Please read this document carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is not to use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time (see the Nesta website at<span class="s2"><a href="https://nesta.live"> https://nesta.live</a></span>). Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
 <p class="p2"><span class="s1"><strong>Children Under the Age of 18</strong></span></p>
-<p class="p2">Our Website is not intended for children under 13 years of age. No one under the age of 18 may provide any personal information to or on the Website. We do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this Website. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18, please contact us at 1800-100-100 .</p>
+<p class="p2">Our Website is not intended for children under 13 years of age. No one under the age of 18 may provide any personal information to or on the Website. We do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this Website. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18, please contact us at enquiry@nesta.live .</p>
 <p class="p2"><span class="s1"><strong>Information We Collect About You and How We Collect It</strong></span></p>
 <p class="p2">We may collect several types of information from and about users of our Website, including information:</p>
 <ul class="ul1">
@@ -134,7 +134,7 @@ export const PrivacyPolicyContent = () =>{
 <p class="p2">We will retain your personal information with us for a period of seven (7) years from the date of creation and for as long as we need it to fulfil the purposes for which it was collected as detailed in this Privacy Policy. We may need to retain certain information for longer periods such as record-keeping/reporting in accordance with applicable law or for other legitimate reasons like enforcement of legal rights, fraud prevention, etc. Residual anonymous information and aggregate information, neither of which identifies you (directly or indirectly), may be stored indefinitely.</p>
 <p class="p3">&nbsp;</p>
 <p class="p2"><span class="s1"><strong>Contact Information</strong></span></p>
-<p class="p2">To ask questions or comment about this privacy policy and our privacy practices, contact us at: 1800-100-100</p>
+<p class="p2">To ask questions or comment about this privacy policy and our privacy practices, contact us at: enquiry@nesta.live</p>
 <p class="p3">&nbsp;</p>
 </Container>)
 }

@@ -108,8 +108,10 @@ const StyledDiv2 = styled.div`
           background-size:cover;          
         }
         @media (max-width:600px){
+          position:relative;
           width:100%;
           max-width:100%;
+          height: 506px;
           background-size:cover;
         }
 
@@ -147,16 +149,16 @@ const DivText = styled.div`
     }
     }
     @media (max-width:600px){
-          align-items: flex-start;
-          width: 100%;
+          position: relative;
           display:flex ; 
-          /* justify-content: center; */
+          width: 100%;
           flex-direction:column;
           gap: 10px;
-          height: 150px;
-          /* align-content: center; */
-          top: 55%;
-          left: 20px;
+          padding: 10px;
+          height: 100%;
+          align-items: flex-end;
+          justify-content: flex-end;
+          vertical-align: bottom;
     }
 `
 
@@ -203,7 +205,10 @@ const ButtonContainer = styled.div`
     position: relative;
     @media (max-width:600px){
           position: relative;
+          width: 100%;
           display:flex ; 
+          justify-content: center;
+          align-items: center;
           flex-direction:row;
           gap: 5px;
           /* left: 20px; */
@@ -220,7 +225,7 @@ export const BannerLayout =(props)=>{
      classNames={{enterActive: 'animate__animated animate__flipInX', exitActive: 'animate__animated animate__flipOutX'}}>
        {state => <StyledDiv src={props.src} style={{...transitions[state]}}>
                     <DivText> 
-                      <H2 color="white" width= "90%" height="100%" weight="600">{props.title} </H2>
+                      <H2 color="white" width= "100%" height="auto" weight="600">{props.title} </H2>
                       <ButtonContainer>
                         <KnowMoreButton onClick={props.KnowMoreHandler} />
                         <MeetUsButton onClick={props.contactUsHandler} />
@@ -252,6 +257,15 @@ export const BannerWithTitleLayout =(props)=>{
     // return <Image src={props.src} width={"100%"} height={"634px"}/>
 }
 
+const RightAlignContainer = styled.div`
+ @media (max-width:600px){
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: left;
+  align-items: flex-start;
+ }
+`
 
 export const BannerWithTitleAndButtonLayout =(props)=>{
     return <StyledBannerDiv2>
@@ -261,9 +275,17 @@ export const BannerWithTitleAndButtonLayout =(props)=>{
      timeout={300} 
      classNames={{enterActive: 'animate__animated animate__flipInX', exitActive: 'animate__animated animate__flipOutX'}}>
        {state => <StyledDiv2 src={props.src} style={{...transitions[state]}}>
-                    <DivText> 
-                        <H2 color="white" width= "50%" height="100%" weight="600">{props.title} </H2>
+                    <DivText>
+                      {/* <ColumnFlex> */}
+                      <RightAlignContainer>
+                        <H2 color="white" width= "100%" height="auto" weight="600">{props.title} </H2>
+                      </RightAlignContainer>
+
+                      <RightAlignContainer>
                         <MeetUsButton onClick={props.onClickHandler} />
+                      </RightAlignContainer>
+                        
+                      {/* </ColumnFlex>  */}
                     </DivText>
                 </StyledDiv2>}
         </CSSTransition></SwitchTransition>

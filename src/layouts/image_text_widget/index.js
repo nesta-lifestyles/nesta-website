@@ -97,7 +97,7 @@ const RowContainer = styled.div`
     margin-top: 16px;
     @media (max-width:600px){
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
     
 `

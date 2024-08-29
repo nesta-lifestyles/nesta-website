@@ -43,6 +43,7 @@ const ContentContainer = styled.div`
       margin-right: 0px;
       padding-top: 0px;
       background-color: white;
+      gap: 50px;
     } 
 
     /* height: 100%;

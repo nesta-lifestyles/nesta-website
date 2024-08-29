@@ -31,7 +31,7 @@ const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     @media (max-width: 991px) {
-        padding-right: 40px;
+        /* padding-right: 40px; */
     } 
 `
 

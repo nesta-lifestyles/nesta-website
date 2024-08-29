@@ -22,6 +22,7 @@ const Container = styled.div`
     border-radius: 16px;
     @media (max-width:600px){
       padding:20px;
+      gap: 80px;
       background-color: white;
     } 
 `
@@ -31,8 +32,6 @@ class NestaDesignContour extends React.Component {
         super();
         this.state = initialContourDesignData;
     }
-
-
 
     render(){
         
@@ -45,15 +44,15 @@ class NestaDesignContour extends React.Component {
         
         return( 
             <MainContainerDiv>
-                 <Container>
-            <BannerComponent banner={this.state.banner} meetAnExpertHandler={contactUsHandler}/>
-            <WeimarCharacteristics characteristics={this.state.inspiration}/>
-            <div>
-                <GalleryLayout2 images={this.state.gallery}/>
-                <WhyToChoose whyToChoose={this.state.whyToChoose}/>
-            </div>
-            <MeetAnExpert meetAnExpert={this.state.meetAnExpert} />
-            </Container>   
+                <Container>
+                    <BannerComponent banner={this.state.banner} meetAnExpertHandler={contactUsHandler}/>
+                    <WeimarCharacteristics characteristics={this.state.inspiration}/>
+                    <div>
+                        <GalleryLayout2 images={this.state.gallery}/>
+                        <WhyToChoose whyToChoose={this.state.whyToChoose}/>
+                    </div>
+                    <MeetAnExpert meetAnExpert={this.state.meetAnExpert} />
+                </Container>   
             </MainContainerDiv>
                 
         )

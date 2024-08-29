@@ -16,7 +16,7 @@ export const TermsOfServiceContent = () =>{
 <p class="p3">Effective Date: <span class="s1">August 26</span>, 2024</p>
 <p class="p3"><span class="s2"><strong>Acceptance of the Terms of Use</strong></span></p>
 <p class="p3">These terms of use are entered into by and between You and us ("<strong>we</strong>," or "<strong>us</strong>"). The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, "<strong>Terms of Use</strong>"), govern your access to and use of Nesta Lifestyle Private Limited., (&ldquo;Nesta&rdquo;) brand website <span class="s3"><a href="https://nesta.live">https://nesta.live</a> </span>(the "<strong>Website</strong>").</p>
-<p class="p3">Please read the Terms of Use carefully before you start to use the Website. <strong>By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at</strong> <a href="https://nesta.live/privacy">https://nesta.live/privacy</a><strong>, incorporated herein by reference.</strong> If you do not want to agree to these Terms of Use, you must not access or use the Website.</p>
+<p class="p3">Please read the Terms of Use carefully before you start to use the Website. <strong>By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at</strong> <a href="https://nesta.live/privacy-policy">https://nesta.live/privacy-policy</a><strong>, incorporated herein by reference.</strong> If you do not want to agree to these Terms of Use, you must not access or use the Website.</p>
 <p class="p3">By using this Website, you have full legal authority to bind your employer or other such entity (as applicable) to these Terms of Use and Privacy Policy, if you do not agree or meet this requirement, you must not access or use the Website.</p>
 <p class="p3"><span class="s2"><strong>Changes to the Terms of Use</strong></span></p>
 <p class="p3">We may revise and update these Terms of Use from time to time in our sole discretion. All changes are effective immediately when we post them, and apply to all access to and use of the Website thereafter.</p>
@@ -85,7 +85,7 @@ export const TermsOfServiceContent = () =>{
 <p class="p3">We may update the content on this Website from time to time, but its content is not necessarily complete or up-to-date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.</p>
 <p class="p2">&nbsp;</p>
 <p class="p3"><span class="s2"><strong>Information About You and Your Visits to the Website</strong></span></p>
-<p class="p3">All information we collect on this Website is subject to our Privacy Policy at <span class="s3"><a href="https://nesta.live/privacy">https://nesta.live/privacy</a></span> and Cookie Policy at <span class="s3"> <a href="https://nesta.live/privacy">https://nesta.live/coockie-policy</a></span>. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the Privacy Policy and Cookie Policy.</p>
+<p class="p3">All information we collect on this Website is subject to our Privacy Policy at <span class="s3"><a href="https://nesta.live/privacy-policy">https://nesta.live/privacy-policy</a></span> and Cookie Policy at <span class="s3"> <a href="https://nesta.live/cookie-policy">https://nesta.live/coockie-policy</a></span>. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the Privacy Policy and Cookie Policy.</p>
 <p class="p3"><span class="s2"><strong>Linking to the Website and Social Media Features</strong></span></p>
 <p class="p3">You may link to our homepage, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval, or endorsement on our part without our express written consent.</p>
 <p class="p3"><span class="s2"><strong>Links from the Website</strong></span></p>
@@ -110,6 +110,6 @@ export const TermsOfServiceContent = () =>{
 <p class="p3"><span class="s2"><strong>Entire Agreement</strong></span></p>
 <p class="p3">The Terms of Use, our Privacy Policy and Cookie Policy constitute the sole and entire agreement between you and Nesta regarding the Website and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Website.</p>
 <p class="p3"><span class="s2"><strong>Your Comments and Concerns</strong></span></p>
-<p class="p4">This website is operated by Nesta. To ask questions or comment about these Terms of Use contact us at:<span class="Apple-converted-space">&nbsp; &nbsp; </span>1800-100-100</p>
+<p class="p4">This website is operated by Nesta. To ask questions or comment about these Terms of Use contact us at:<span class="Apple-converted-space">&nbsp; &nbsp; </span></p>
     </Container>)
 }

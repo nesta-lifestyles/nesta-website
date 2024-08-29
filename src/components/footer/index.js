@@ -54,7 +54,7 @@ export default function Footer() {
           <Div23 />
           <Div24  to="/privacy-policy">privacy policy</Div24>
           <Div25 />
-          <Div26>do not sell my personal information</Div26>
+          <Div24  to="/cookie-policy">cookie policy</Div24>
         </Div21>
         <div>
         <IconDiv2>
@@ -276,10 +276,6 @@ const Div25 = styled.div`
   @media (max-width: 600px){
     display: none;
   }
-`;
-
-const Div26 = styled.div`
-  font-family: Outfit, sans-serif;
 `;
 
 const Div27 = styled.div`

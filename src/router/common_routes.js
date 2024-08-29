@@ -5,8 +5,9 @@ import { ScheduleCallAgent } from "../pages/contact_us/schedule_call"
 import React from "react"
 import NestaHomePage from "../pages/home"
 import { FormContextProvider } from "../pages/contact_us/form_context"
-import { PrivacyPolicy } from "../pages/privacy_policy"
-import { TermsOfService } from "../pages/terms_of_service"
+import { PrivacyPolicy } from "../pages/common_pages/privacy_policy/index"
+import { TermsOfService } from "../pages/common_pages/terms_of_service/index"
+import { CookiePolicy } from "../pages/common_pages/cookie_policy/index"
 
 
 export const CommonRoutes = ()=>{
@@ -18,6 +19,7 @@ export const CommonRoutes = ()=>{
                     <Route path='/schduler-call-with-an-expert' Component={ScheduleCallAgent} />
                     <Route path='/privacy-policy' Component={PrivacyPolicy} />
                     <Route path='/terms-of-service' Component={TermsOfService} />
+                    <Route path='/cookie-policy' Component={CookiePolicy} />
             </Routes>
             </FormContextProvider>)
 }

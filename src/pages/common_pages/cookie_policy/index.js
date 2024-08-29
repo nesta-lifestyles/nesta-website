@@ -1,7 +1,10 @@
-import styled from "styled-components";
-import { TermsOfServiceContent } from "./content";
-import React from "react";
-import { MainContainerDiv } from "../../App";
+import React from "react"
+import styled from "styled-components"
+import { MainContainerDiv } from "../../../App"
+import { CookiePolicyContent } from "./content"
+
+
+
 
 const Container = styled.div`
     /* margin-left: 70px;
@@ -22,10 +25,10 @@ const Container = styled.div`
 `
 
 
-export const TermsOfService = () =>{
+export const CookiePolicy= () =>{
     return(<MainContainerDiv>
                 <Container>
-                    <TermsOfServiceContent/>
+                    <CookiePolicyContent/>
                 </Container>
         </MainContainerDiv>)
 }

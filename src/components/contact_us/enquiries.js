@@ -37,9 +37,9 @@ export const Enquiries = () =>{
         <H2  height="25px" width="100%">Careers</H2>
         <Text  height="25px" width="100%">careers@nesta.live</Text>
         </EachElement>
-        <EachElement>
-        <H2  height="25px" width="100%">Call Us</H2>
-        <Text height="25px" width="100%">1800-100-100</Text>
-        </EachElement>
+        {/* <EachElement> */}
+        {/* <H2  height="25px" width="100%">Call Us</H2>
+        <Text height="25px" width="100%">1800-100-100</Text> */}
+        {/* </EachElement> */}
     </Container>)
 }
