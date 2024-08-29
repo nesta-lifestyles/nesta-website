@@ -5,8 +5,18 @@ import { v4 as uuidv4 } from 'uuid';
 export const NestaDecorCartContext = createContext();
 
 export const NestaDecorCartProvider = ({ children }) => {
-    const [cart, setCart] = useState(new Map());
+    const [cart, setCart] = useState(()=>{
+        console.log("From Local Storage", localStorage.getItem('##cart'));
+        const savedCart = new Map(JSON.parse(localStorage.getItem('##cart')));
+        console.log("Saved CART", savedCart);
+    return savedCart && Object.keys(savedCart).length===0 ? savedCart : new Map();
+    });
     
+    useEffect(() => {
+        console.log("updating cart", JSON.stringify(Array.from(cart.entries())));
+        localStorage.setItem('##cart',  JSON.stringify(Array.from(cart.entries())));
+    }, [cart]);
+
     const firstMessage = "Your cart is awaiting your selections."
     const whenManuallyEmptyTheCart = "You have no items in your cart"
 
@@ -104,6 +114,8 @@ export const NestaDecorCartProvider = ({ children }) => {
 
     const getTotalCount =() =>{
         var count  = 0
+        console.log("Value from the MAP ::: ",cart)
+        
         cart.forEach((value, key) =>{
             // console.log("Value from the MAP ::: ",value)
             // console.log("key from the MAP ::: ",key)
