@@ -10,9 +10,9 @@
 
 import ville102 from "../../images/ville/102/banner.avif"
 import ville200 from "../../images/ville/200/banner_1.avif"
-import ville201 from "../../images/ville/201/banner.avif"
-import ville202 from "../../images/ville/202/banner.avif"
-import ville203 from "../../images/ville/203/banner.avif"
+import ville201 from "../../images/ville/201/banner_2_22.avif"
+import ville202 from "../../images/ville/202/banner_1.avif"
+import ville203 from "../../images/ville/203/banner_1.avif"
 
 import design100 from "../../images/designs/nesta_design_100/gallery_1_1.avif"
 import design101 from "../../images/designs/nesta_design_101/banner_main.avif"

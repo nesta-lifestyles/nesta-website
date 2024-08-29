@@ -110,6 +110,6 @@ export const TermsOfServiceContent = () =>{
 <p class="p3"><span class="s2"><strong>Entire Agreement</strong></span></p>
 <p class="p3">The Terms of Use, our Privacy Policy and Cookie Policy constitute the sole and entire agreement between you and Nesta regarding the Website and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Website.</p>
 <p class="p3"><span class="s2"><strong>Your Comments and Concerns</strong></span></p>
-<p class="p4">This website is operated by Nesta. To ask questions or comment about these Terms of Use contact us at:<span class="Apple-converted-space">&nbsp; &nbsp; </span></p>
+<p class="p4">This website is operated by Nesta. To ask questions or comment about these Terms of Use contact us at:enquiry@nesta.live<span class="Apple-converted-space">&nbsp; &nbsp; </span></p>
     </Container>)
 }

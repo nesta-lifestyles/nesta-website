@@ -1,6 +1,6 @@
 import React from "react"
 import firstImageMobile from "../../images/banner/3.avif"
-import second from "../../images/ville/203/banner.avif"
+import second from "../../images/ville/203/banner_1.avif"
 import third from "../../images/ville/200/banner_1.avif"
 import fourth from "../../images/designs/nesta_design_101/gallery_h_1_2.avif"
 import { Carousel } from "react-bootstrap"
