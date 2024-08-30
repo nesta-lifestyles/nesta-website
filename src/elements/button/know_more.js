@@ -275,7 +275,9 @@ const PartnerButton = styled.div`
 `
 
 export const Partner = () => {
-    return(<PartnerButton>Partner</PartnerButton>)
+    return(<ContactUsLink to="/submit_project">
+            <PartnerButton>Partner</PartnerButton>
+        </ContactUsLink>)
 }
 
 
