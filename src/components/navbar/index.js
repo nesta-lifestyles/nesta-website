@@ -361,8 +361,8 @@ const ButtonContainer = styled.div`
     @media (max-width:600px){
         position: relative;
         width: 42%;
+        max-height: 90px;
         height: 100%;
-        margin-bottom: 60px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
