@@ -352,19 +352,21 @@ const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 10px;
-    height: 40px;
-    max-height:40px;
+    height: 100%;
+    max-height: 100%;
     width: 300px;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-bottom: 25px;
     @media (max-width:600px){
         position: relative;
-        width: 45%;
+        width: 42%;
         height: 100%;
         margin-bottom: 60px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        margin-bottom: unset;
     }
 `
 

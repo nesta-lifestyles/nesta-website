@@ -8,6 +8,7 @@ import { FormContextProvider } from "../pages/contact_us/form_context"
 import { PrivacyPolicy } from "../pages/common_pages/privacy_policy/index"
 import { TermsOfService } from "../pages/common_pages/terms_of_service/index"
 import { CookiePolicy } from "../pages/common_pages/cookie_policy/index"
+import { ProjectSubmissionPage } from "../pages/project_submission"
 
 
 export const CommonRoutes = ()=>{
@@ -20,6 +21,7 @@ export const CommonRoutes = ()=>{
                     <Route path='/privacy-policy' Component={PrivacyPolicy} />
                     <Route path='/terms-of-service' Component={TermsOfService} />
                     <Route path='/cookie-policy' Component={CookiePolicy} />
+                    <Route path='/submit_project' Component={ProjectSubmissionPage} />
             </Routes>
             </FormContextProvider>)
 }
