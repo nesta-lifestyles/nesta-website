@@ -50,7 +50,7 @@ export const MeetUsButton = styled.div`
     position: relative;
     border-radius: 8px;
     color: white;
-    width: 160px;
+    width: auto;
     height: auto;
     padding: 16px 24px;
     background-color: #4597F9;
@@ -60,9 +60,9 @@ export const MeetUsButton = styled.div`
     cursor: pointer;
     text-align: center;
     @media (max-width:600px){
-      width: 140px;
+      width: auto;
       height: 53px;
-      margin: 10px;
+      text-align: center;
       margin-left: 0px;
       font: 400 12px/150% Poppins, sans-serif;
     }
