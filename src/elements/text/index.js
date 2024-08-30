@@ -6,7 +6,7 @@ const StyledH1 = styled.div`
     width: ${props => props.width === undefined?"580px":props.width};
     height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    /* font-weight: ${props => props.weight === undefined?"700":props.weight}; */
     font-size: 36px;
     line-height: 38.4px;
     /* opacity: 0.8; */
@@ -29,7 +29,7 @@ const StyledH2 = styled.div`
     width: ${props => props.width === undefined?"580px":props.width};
     height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    /* font-weight: ${props => props.weight === undefined?"700":props.weight}; */
     font-size: 24px;
     line-height: 38.4px;
     /* opacity: 0.8; */
@@ -55,7 +55,7 @@ const StyledH3 = styled.div`
     width: ${props => props.width === undefined?"580px":props.width};
     height: ${props => props.height === undefined?"153px":props.height};
     font-style: normal;
-    font-weight: ${props => props.weight === undefined?"700":props.weight};
+    /* font-weight: ${props => props.weight === undefined?"700":props.weight}; */
     font-size: 20px;
     text-align: start;
     line-height: 38.4px;
@@ -79,7 +79,7 @@ const StyledText = styled.p`
     width: ${props => props.width === undefined?"479px":props.width};
     height: ${props => props.height === undefined?"216px":props.height};
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 16px;
     overflow: hidden;
     -ms-wrap-flow: end;
@@ -98,7 +98,7 @@ const StyledSmallText = styled.p`
     width: ${props => props.width === undefined?"479px":props.width};
     height: ${props => props.height === undefined?"216px":props.height};
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 14px;
     line-height: 100%;
     overflow: hidden;
