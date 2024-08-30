@@ -221,6 +221,8 @@ const Div20 = styled.div`
   justify-content: space-between;
   padding: 0 20px;
   @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     flex-wrap: wrap;
     margin-top: 0px;
