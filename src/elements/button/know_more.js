@@ -50,7 +50,7 @@ export const MeetUsButton = styled.div`
     position: relative;
     border-radius: 8px;
     color: white;
-    width: 160px;
+    width: auto;
     height: auto;
     padding: 16px 24px;
     background-color: #4597F9;
