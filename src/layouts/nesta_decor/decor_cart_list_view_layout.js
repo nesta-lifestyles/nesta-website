@@ -77,7 +77,7 @@ export const DecorCartCheckoutLayout = () => {
     
     const itemMap = getUnqueItemsByCount();
     return(<ColumnFlex>
-               {itemMap.entries().map((item, code)=> 
+               {[...itemMap.entries()].map((item, code)=> 
                <ItemContainer>
                 <RowFlex gap="20px">
                     <ImageContainer onClick={()=>handleOnSelect(item[1].code)}>
