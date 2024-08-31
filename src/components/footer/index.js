@@ -33,7 +33,7 @@ export default function Footer() {
                 <Div7 to="/ville/evoque">Evoque</Div7>
               </Div5>
             </Column>
-            <Column2>
+            <Column>
               <Div9>
                 <Div6>NESTA DESIGN</Div6>
                 <Div7 to="/design/florence">Florence</Div7>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Div7 to="/design/contour">Contour</Div7>
                 <Div7 to="/design/serendi">Serendi</Div7>
               </Div9>
-            </Column2>
+            </Column>
           </Div4>
         <div>
           <RightCornerLayout />
@@ -121,7 +121,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 100%;
+  width: 175px;
   @media (max-width: 991px) {
     width: 100%;
     margin-left: 0px;
@@ -131,19 +131,21 @@ const Column = styled.div`
 const Div5 = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-  font-weight: 400;
+  /* font-weight: 400; */
   text-transform: capitalize;
   line-height: 164%;
   @media (max-width: 991px) {
     margin-top: 40px;
+    font-size: 16px;
   }
 `;
 
 const Div6 = styled.div`
   color: #767676;
   letter-spacing: 4.2px;
+  font-weight: 400;
   font: 14px Poppins, sans-serif;
   user-select: none;
   
@@ -165,29 +167,19 @@ const Div7 = styled(Link)`
   }
 `;
 
-const Column2 = styled.div`
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 100%;
-  margin-left: 20px;
-  @media (max-width: 991px) {
-    margin-left: 0px;
-    width: 100%;
-  }
-`;
 
 const Div9 = styled.div`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 164%;
 
   @media (max-width: 991px) {
     margin-top: 40px;
+    font-size: 16px;
   }
 `;
 
@@ -215,7 +207,7 @@ const Div20 = styled.div`
   gap: 20px;
   font-size: 14px;
   color: #878f9c;
-  font-weight: 400;
+  /* font-weight: 400; */
   text-transform: capitalize;
   line-height: 164%;
   justify-content: space-between;

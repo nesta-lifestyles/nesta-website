@@ -4,6 +4,8 @@ import { NestaDecorCartContext } from "../../pages/nesta_decor/decor_basket_cont
 import styled from "styled-components";
 import { Text } from "../../elements/text";
 import { useRFQHandler } from "../../handlers/nesta_decor_RFQ_handlers";
+import { useLocation, useNavigate } from "react-router-dom";
+import { isUrlBelongsNestaDecor, isUrlBelongsToCheckout } from "../../utils/url_utils";
 
 
 const ButtonContainer1 = styled.div`
@@ -39,6 +41,8 @@ const TextContainer = styled.div`
 
 
 export const ButtonContainerRounded = (props) => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const { showRFQScreen} = useRFQHandler();
     const { cart, addToCart, removeFromCart} = useContext(NestaDecorCartContext);
     // const [count, setCount] = useState(getCountOf(props.decorItem))
@@ -61,9 +65,22 @@ export const ButtonContainerRounded = (props) => {
         return 0
     }
     
+    const getCountOf = (decorItem) => {
+        if(cart.get(decorItem.code)) {
+            // console.log("LET THE GET COUNT ", cart.get(props.decorItem.code))
+            return cart.get(props.decorItem.code).count
+        }
+        return 0
+    }
 
-    const handleRequestQuotes = () => {
-        showRFQScreen();
+    const handleRequestQuotes = (decorItem) => {
+        if(getCountOf(decorItem)===0){
+            addToCart(decorItem);
+        }
+        if(isUrlBelongsToCheckout(location)) {
+            showRFQScreen();
+        }
+        navigate('/decor/cart/checkout');
     }
 
 
@@ -76,14 +93,16 @@ export const ButtonContainerRounded = (props) => {
                         </TextContainer>
                         <RoundedButton onClick={() => handleAddToCart(props.decorItem)}>+</RoundedButton>
                     </PlusMinusButtonContainer>}
-        <RequestForQuoteRounded  onClick={() =>handleRequestQuotes()}/>
+        <RequestForQuoteRounded  onClick={() =>handleRequestQuotes(props.decorItem)}/>
     </ButtonContainer1>)
 }
 
 
 export const ButtonContainer = (props) => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const { showRFQScreen} = useRFQHandler();
-    const {  getCountOf, updateToCart} = useContext(NestaDecorCartContext);
+    const {  getCountOf, addToCart, updateToCart} = useContext(NestaDecorCartContext);
 
     const handleAddToCart = (decorItem, count) => {
         //addToCart(decorItem);
@@ -96,10 +115,15 @@ export const ButtonContainer = (props) => {
         }
         return false
     }
-    
 
-    const handleRequestQuotes = () => {
-        showRFQScreen();
+    const handleRequestQuotes = (decorItem) => {
+        if(getCountOf(decorItem)===0){
+            addToCart(decorItem);
+        }
+        if(isUrlBelongsToCheckout(location)) {
+            showRFQScreen();
+        }
+        navigate('/decor/cart/checkout');
     }
 
 
@@ -148,6 +172,6 @@ export const ButtonContainer = (props) => {
                 </SelectTag>
             </RowContainer>
         </PlusMinusButtonContainer>}
-        <RequestForQuoteButton  onClick={() =>handleRequestQuotes()}/>
+        <RequestForQuoteButton  onClick={() =>handleRequestQuotes(props.decorItem)}/>
     </ButtonContainer1>)
 }
