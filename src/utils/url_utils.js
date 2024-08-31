@@ -15,6 +15,13 @@ export const isUrlBelongsNestaDecor = (url) => {
     return false
 }
 
+export const isUrlBelongsToCheckout = (url) => {
+    if(url.pathname.includes("/cart/checkout")) {
+        return true
+    }
+    return false
+}
+
 export const getNestaDesignName = (url) => {
     if(url.pathname.includes("/design")) {
         if(url.pathname.split("/").length>1) {
