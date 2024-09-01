@@ -4,6 +4,7 @@ import React from "react"
 import { H2 } from "../../elements/text"
 import { Image } from "../../elements/image"
 import cancelIcon from "../../images/icons/x.png"
+import { CancelXButtonRounded } from "../../elements/button/cancel_x_button"
 
 
 const Container2 = styled.div`
@@ -84,7 +85,7 @@ export const ContactAnExpertPage = (props) => {
     return(
         <OverlayContainer id="overlay_container">
             <Container2>
-                <Button onClick={handleCancelButton} id="cancel_button" ><Image width="24px" height="24px" src={cancelIcon}/></Button>
+                <CancelXButtonRounded onClick={handleCancelButton}/>
                 <WriteToUsElementGap> 
                     <H2 height="40px" width="100%">Contact an Expert</H2>
                 </WriteToUsElementGap>
