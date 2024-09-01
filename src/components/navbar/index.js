@@ -350,6 +350,7 @@ const TopContainer =styled.div`
 
 
 
+
 const BottomContainer =styled.div`
     @media (min-width:600px){
         display: none;
