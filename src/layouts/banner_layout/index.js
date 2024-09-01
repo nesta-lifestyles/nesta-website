@@ -156,6 +156,7 @@ const DivText = styled.div`
           gap: 10px;
           padding: 5px;
           height: 100%;
+          padding-bottom: 10px;
           align-items: flex-end;
           justify-content: flex-end;
           vertical-align: bottom;
