@@ -62,8 +62,7 @@ export const OverlayScreen = () => {
             <CSSTransition
                 key="overlay1"
                 timeout={500}
-                classNames="overlay"
-            >
+                classNames="overlay">
                 <Overlay show={showOverlay} placement="auto" transition={true}>
                     <ContactAnExpertPage  updateOverlayState={contactUsHandler} onSwitch={switchOverlay}/>
                 </Overlay>

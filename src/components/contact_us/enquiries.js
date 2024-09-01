@@ -22,20 +22,35 @@ const EachElement = styled.div`
 `
 
 
+const AnchorElement = styled.a`
+    text-decoration: none;
+    opacity: 0.75;
+    &:hover{
+        opacity: 1;
+        color: black;
+    }
+`
+
 
 export const Enquiries = () =>{
     return(<Container>
         <EachElement>
             <H2 height="25px" width="100%">Enquiries</H2>
-            <Text height="25px" width="100%">enquiry@nesta.live</Text>
+            <AnchorElement href="mailto:enquiry@nesta.live" class="email-link">
+                <Text height="25px" width="100%">enquiry@nesta.live</Text>
+            </AnchorElement>
         </EachElement>
         <EachElement>
-        <H2 height="25px" width="100%">Sales</H2>
-        <Text height="25px" width="100%">sales@nesta.live</Text>
+            <H2 height="25px" width="100%">Sales</H2>
+            <AnchorElement href="mailto:sales@nesta.live" class="email-link">
+                <Text height="25px" width="100%">sales@nesta.live</Text>
+            </AnchorElement>
         </EachElement>
         <EachElement>
-        <H2  height="25px" width="100%">Careers</H2>
-        <Text  height="25px" width="100%">careers@nesta.live</Text>
+            <H2  height="25px" width="100%">Careers</H2>
+            <AnchorElement href="mailto:careers@nesta.live" class="email-link">
+                <Text  height="25px" width="100%">careers@nesta.live</Text>    
+            </AnchorElement>
         </EachElement>
         {/* <EachElement> */}
         {/* <H2  height="25px" width="100%">Call Us</H2>
