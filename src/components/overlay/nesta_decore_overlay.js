@@ -54,6 +54,7 @@ export const NestaDecorOverlayScreen = () => {
     const { isSuccess, updateFormSuccess}= useContext(FormContext)
 
     const handleCancelOverlay =()=>{
+        console.log("Cancel Overlay screen clicked...!!!");
         updateRequestForQuote(false)
         document.body.classList.remove('no-scroll')
         updateFormSuccess(false)
