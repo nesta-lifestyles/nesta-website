@@ -67,8 +67,8 @@ const DivButtonContainer = styled.div`
   width: 100%;
   @media (max-width: 600px) {
     gap: 5px;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
   }
 `
 
@@ -95,11 +95,13 @@ const transitions = {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: left;
+  gap: 10px;
   @media (max-width: 600px) {
     flex-direction: column;
-    
+    padding: 10px;
+    gap: 0px;
   }
 `
 
@@ -119,12 +121,13 @@ export const Title = (props) => {
             <DivText>
               <H1 value="" color={props.color_codes} width= "100%" height="auto"/>
             </DivText>
-          </Container>
-          
-          <DivButtonContainer>
+            <DivButtonContainer>
               <ExploreButton  onClick={()=>handleExploreModels(props.link)}> Models</ExploreButton>
               <MeetUsButton onClick={props.handleMeetUsButton} /> 
-          </DivButtonContainer>
+            </DivButtonContainer>
+          </Container>
+          
+         
         {/* </DivText2> */}
     </TitleContainer>)
 }
