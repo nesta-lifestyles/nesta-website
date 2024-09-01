@@ -9,15 +9,20 @@ const Button = styled.div`
     top: 10px;
     border-radius: 50%;
     color: black;
+    z-index: 1000;
     width: 34px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 5px; */
     height: 34px;
     font: 400 14px/150% Poppins, sans-serif;
     background-color: white;
     transition: transform 0.1s, box-shadow 0.1s;
     cursor: pointer;
     @media (max-width: 991px) {
-        padding: 0 20px;
+        width: 24px;
+        height: 24px;
     }
 
     &:hover{
@@ -31,8 +36,13 @@ const Button = styled.div`
     }
     
     &:active{
-        transform: scale(0.95);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: 0.35s;
+        /* transform: scale(1.05); */
+        font-weight: 500;
+        text-decoration: dashed;
+        opacity: 1.0;
+        background-color: white;
+        box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5); 
     }
 `
 

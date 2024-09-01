@@ -34,11 +34,12 @@ const Container2 = styled.div`
     margin: auto;
     margin-top: 10%;
     width: 850px;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     border-radius: 16px;  
     text-align: center;
     overflow: scroll;
+    z-index: 1;
     display: flex;
     gap: 20px;
     flex-direction: column;
