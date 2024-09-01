@@ -154,7 +154,7 @@ const DivText = styled.div`
           width: 100%;
           flex-direction:column;
           gap: 10px;
-          padding: 10px;
+          padding: 5px;
           height: 100%;
           align-items: flex-end;
           justify-content: flex-end;
@@ -207,10 +207,10 @@ const ButtonContainer = styled.div`
           position: relative;
           width: 100%;
           display:flex ; 
-          justify-content: center;
-          align-items: center;
+          /* justify-content: center;
+          align-items: center; */
           flex-direction:row;
-          gap: 5px;
+          gap: 10px;
           /* left: 20px; */
           /* bottom: 5px; */
     }
