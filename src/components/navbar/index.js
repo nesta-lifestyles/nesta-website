@@ -13,8 +13,7 @@ import { NestaDesignInformation, ProductInformation } from "./nav_bar_content";
 import XIcon from "../../images/icons/x_svg.svg"
 import { Image } from "../../elements/image";
 import { isMobile } from "react-device-detect";
-import { SmallText } from "../../elements/text";
-import { ContactUsRounded } from "../../elements/button/know_more";
+import { ContactUs, Partner } from "../../elements/button/know_more";
 
 // import { Text } from "../../elements/text";
 
@@ -326,6 +325,7 @@ const CloseIO = styled.div`
 
 const Divider = styled.div`
     @media(max-width: 600px){
+        position: relative;
         height: 1px;
         width: 45%;
         background-color: #878383;
@@ -348,21 +348,25 @@ const TopContainer =styled.div`
 
 `
 
-
-
-
-const BottomContainer =styled.div`
-    @media (min-width:600px){
-        display: none;
-    }
-
-    @media (max-width:600px) {
-        display: flex;
-        width: 25%;
-        flex-direction: row;
-        justify-content: left;
-        align-items: start;
-        text-align: left;
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 100%;
+    max-height: 100%;
+    width: 300px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+    @media (max-width:600px){
+        position: relative;
+        width: 42%;
+        max-height: 90px;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: unset;
     }
 `
 
@@ -449,16 +453,32 @@ const Navbar=() => {
                 <div>
                     <MenuItem  to='/decor' onClick={NavBarHandler}>Nesta Decor</MenuItem>
                 </div>
-                {/* <div>
-                    <MenuItem>Nesta Sense</MenuItem>
-                </div>
-                <div>
-                    <MenuItem>Nesta Xplorer</MenuItem>         
-                </div> */}
                 <Divider />
-                <BottomContainer> <SmallText color="#878383" width="100%" height="auto">© 2024 Nesta Company</SmallText></BottomContainer>       
+                {isMobile && <ButtonContainer>
+                    <div style={{"width":"100%"}} onClick={NavBarHandler}>
+                        <Partner />    
+                    </div>
+                    <div style={{"width":"100%"}} onClick={NavBarHandler}>
+                        <ContactUs />
+                    </div>
+                </ButtonContainer>}
+
+                {/* <Divider />
+                
+                <BottomContainer> 
+                    <SmallText color="#878383" width="100%" height="auto">© 2024 Nesta Company</SmallText>
+                </BottomContainer>   */}
+
             </MenuLink> )}
-            {showNavBar && <ContactUsRounded />}
+            {!isMobile && <ButtonContainer>
+                <Partner />    
+                <ContactUs />
+            </ButtonContainer> }
+            {/* {showNavBar &&
+            <ButtonContainer>
+                    <Partner/>
+                    <ContactUs />
+            </ButtonContainer> } */}
             
             {/* <LoginAlert>
                 <NotificationButton></NotificationButton>
