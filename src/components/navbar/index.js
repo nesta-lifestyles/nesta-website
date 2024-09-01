@@ -348,6 +348,7 @@ const TopContainer =styled.div`
 
 `
 
+<<<<<<< HEAD
 
 
 
@@ -363,6 +364,25 @@ const BottomContainer =styled.div`
         justify-content: left;
         align-items: start;
         text-align: left;
+=======
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 40px;
+    max-height:40px;
+    width: 300px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @media (max-width:600px){
+        position: relative;
+        width: 45%;
+        height: 100%;
+        margin-bottom: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+>>>>>>> parent of b53f6b9 (partner service changes)
     }
 `
 
