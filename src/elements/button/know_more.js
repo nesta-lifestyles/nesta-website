@@ -17,7 +17,7 @@ export const ExploreButton = styled.div`
     @media (max-width:600px){
       width: 140px;
       height: 53px;
-      margin: 10px;
+      /* margin: 10px; */
       margin-left: 0px;
       font: 400 12px/150% Poppins, sans-serif;
     };
@@ -112,7 +112,7 @@ export const KnowMoreButton = styled.div`
     @media (max-width:600px){
       width: 140px;
       height: 53px;
-      margin: 10px;
+      /* margin: 10px; */
       margin-left: 0px;
       font: 400 12px/150% Poppins, sans-serif;
     }

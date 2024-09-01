@@ -46,6 +46,10 @@ const Div = styled.div`
   background-color: #141414;
   border-radius: 20px;
   overflow: hidden;
+  @media (max-width: 600px){
+    padding-bottom:40px;
+  }
+  
 `;
 
 const Div2 = styled.div`
@@ -57,6 +61,7 @@ const Div2 = styled.div`
     gap: 0px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    
   }
 `;
 
@@ -121,7 +126,7 @@ const Div3 = styled.div`
     padding: 10px;
     margin-top: 20px;
     text-overflow: wrap;
-    gap:0px;
+    gap:20px;
     /* padding: 0px; */
   }
 `;
