@@ -100,10 +100,36 @@ export const ProjectaAddressDetails = (props) => {
         }
       };
     
-      const onChange = (e) => {
-        // const {name, value} = e.target
+
+    const onChange = (e) => {
+        const {name, value} = e.target
+        setState(value)
         // updateToContext({[name]:value});
     }
+
+    const onChangeZipcode = (e) => {
+        const {name, value} = e.target
+        setzipCode(value)
+        // updateToContext({[name]:value});
+    }
+
+    const onChangeCity = (e) => {
+        const {name, value} = e.target
+        setCity(value)
+        // updateToContext({[name]:value});
+    }
+    
+    const onChangeCountry = (e) => {
+        const {name, value} = e.target
+        setCountry(value)
+        // updateToContext({[name]:value});
+    }
+     
+
+    //   const onChange = (e) => {
+    //     // const {name, value} = e.target
+    //     // updateToContext({[name]:value});
+    // }
 
 
     return(<div>
@@ -114,12 +140,12 @@ export const ProjectaAddressDetails = (props) => {
                 </Autocomplete>
                 {/* <TextAreaInputBox onChange={onChange} width="100%"  name='addressLine2' type="text" placeholder="Address Line 2" error={formErrors.projectAddress.line2} /> */}
                 <RowContainer>
-                    <InputTextBox onChange={onChange} value={city} width="100%"  name='city' type="numeric"  placeholder="City" error={formErrors.projectAddress.city} />
+                    <InputTextBox onChange={onChangeCity} value={city} width="100%"  name='city' type="numeric"  placeholder="City" error={formErrors.projectAddress.city} />
                     <InputTextBox onChange={onChange} value={state} width="100%"  name='state' type="text" placeholder="State" error={formErrors.projectAddress.state} />
                 </RowContainer>
                 <RowContainer>
-                    <InputTextBox onChange={onChange}  value={zipCode} width="100%"  name='zipcode' type="text"  placeholder="Zip Code"  error={formErrors.projectAddress.zipcode}/>
-                    <InputTextBox onChange={onChange} value={country} width="100%"  name='country' type="text" placeholder="Country"  error={formErrors.projectAddress.country}/>
+                    <InputTextBox onChange={onChangeZipcode}  value={zipCode} width="100%"  name='zipcode' type="text"  placeholder="Zip Code"  error={formErrors.projectAddress.zipcode}/>
+                    <InputTextBox onChange={onChangeCountry} value={country} width="100%"  name='country' type="text" placeholder="Country"  error={formErrors.projectAddress.country}/>
                 </RowContainer>
             </Container>
         </div>)

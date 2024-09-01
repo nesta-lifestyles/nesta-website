@@ -26,14 +26,21 @@ const Container4 = styled.div`
     margin: auto;
     padding-top: 30px;
     padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 50px;
+    @media(max-width:600px) {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
 `
 
 const Container2 = styled.div`
     position: relative;
     margin: auto;
     margin-top: 10%;
-    width: 850px;
+    width: 880px;
     padding: 40px;
     background-color: white;
     border-radius: 16px;  
