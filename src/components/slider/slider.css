@@ -1,0 +1,10 @@
+
+  
+.slide.is-center {
+    border: 3px solid #ff0000;  
+    transition: border 0.3s ease; 
+  }
+
+.slick-track {
+display: inline-flex;
+}

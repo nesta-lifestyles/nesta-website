@@ -11,6 +11,11 @@ import MeetAnExpert from '../components/meet_an_expert';
 import { DesignMeetAnExpertData } from './nesta_design/data/contour';
 import { connect } from 'react-redux';
 import { openOverlay } from '../components/overlay/overlay_reducer';
+import { HomePageRowLayout, HomePageRowLayout1, HomePageRowLayout2, HomePageRowLayout3 } from '../layouts/home_page_layouts';
+import { TestinmonialLayout } from '../layouts/home_page_layouts/testimonial_layout';
+import { H1 } from '../elements/text';
+import { TestimonialComponent } from '../components/slider/slick_slider';
+import { TestimonialsData } from './home_data';
 
 const Container = styled.span`
     display: flex;
@@ -23,6 +28,25 @@ const Container = styled.span`
     padding-right: 90px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    @media (max-width:600px){
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+`
+
+const Container2 = styled.span`
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
     @media (max-width:600px){
         display: flex;
         flex-direction: column;
@@ -85,6 +109,26 @@ class NestaHomePage extends React.Component {
                     onNextIndicatorClick={this.HandleNextDesign} handleMeetUsButton={contactUsHandler}/>
             </BannerContainer>
             <Container style={{backgroundColor: "white"}}>
+                    <HomePageRowLayout1 bg_color="white"/>
+            </Container>   
+            
+            <Container>
+                    <HomePageRowLayout2/>
+            </Container>   
+            <Container style={{backgroundColor: "white"}}>
+                    <HomePageRowLayout3 bg_color="white"/>
+            </Container>   
+            <Container2>
+                <H1 height="40px" width="100%" value="Testimonials"></H1>
+            </Container2>
+            <div style={{backgroundColor: "white"}}>
+                    <TestimonialComponent testimonials={TestimonialsData} bg_color="white"/>
+            </div>
+            {/* <Container2>
+               
+            </Container2>
+             */}
+            {/* <Container style={{backgroundColor: "white"}}>
                     <ImageTextWithTitleLayout bg_color="white" image={first} title="Uncover your Unique" text="Feeling Lost in Your Style Choices? Let Nesta Guide You to Discover Your Design" />
             </Container>   
             <Container>
@@ -92,7 +136,7 @@ class NestaHomePage extends React.Component {
             </Container>
             <Container style={{backgroundColor: "white"}}>
                     <ImageTextWithTitleLayout bg_color="white" image={relaxNestaImage} title = "Relax. Nesta.Live" text="Ease back as we bring your envisioned design to your doorstep"/>
-            </Container>    
+            </Container>     */}
             {/* <Container>
             <Layout3 carousel_data = {this.carasoule_data} small_image={this.state.imageArray[2]} 
                     header ="Lorem Ipsum is simply dummy text of the printing" 

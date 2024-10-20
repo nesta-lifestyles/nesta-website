@@ -45,6 +45,49 @@ export const ExploreButton = styled.div`
     }
 `
 
+export const ExploreWhiteButton = styled.div`
+    position: relative;
+    border-radius: 8px;
+    height: auto;
+    width: 160px;
+    background-color: #fff;
+    color: black;
+    padding: 16px 24px;
+    font: 400 14px/150% Poppins, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: transform 0.1s, box-shadow 0.1s;
+    cursor: pointer;
+    @media (max-width:600px){
+      width: 140px;
+      height: 53px;
+      /* margin: 10px; */
+      margin-left: 0px;
+      font: 400 12px/150% Poppins, sans-serif;
+    };
+
+    &::before {
+        content: "Explore";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    &:hover{
+        transition: 0.35s;
+        /* transform: scale(1.05); */
+        font-weight: 500;
+        text-decoration: dashed;
+        opacity: 1.0;
+        box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5); 
+    }
+
+    &:active{
+        transform: scale(0.95);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+`
+
 
 export const MeetUsButton = styled.div`
     position: relative;
