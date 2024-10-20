@@ -49,7 +49,7 @@ const characteristics = {
 
 const whyToChoose = {
     "image":whyToChooseImage,
-    "title":"Why Choose Florence",
+    "title":"Why Choose Equinox",
     "items":[
         "Serenity and Balance", 
         "Soothing Color Palettes",

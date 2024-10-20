@@ -33,7 +33,7 @@ const inspirations = {
 
 const whyToChoose = {
     "image":whyToChooseImage,
-    "title":"Why Choose Florence",
+    "title":"Why Choose Serendi",
     "items":[
         "Elegant Simplicity",
         "Balanced Aesthetics",
