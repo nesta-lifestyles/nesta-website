@@ -33,7 +33,7 @@ const characteristics = {
 
 const whyToChoose = {
     "image":whyToChooseImage,
-    "title":"Why Choose Florence",
+    "title":"Why Choose Contour",
     "items":[
         "Modern Aesthetics", 
         "Functional Elegance",
