@@ -69,7 +69,6 @@ const Divider = styled.div`
     background-color: #878383;
 `
 
-
 export const ScheduleCallAgent = (props) => {
    const { isSuccess}= useContext(FormContext) 
     const handleCancelButton =()=> {
@@ -84,12 +83,12 @@ export const ScheduleCallAgent = (props) => {
             <Container4>
             <Container2>
                 <CancelXButtonRounded onClick={handleCancelButton}/>
-                {!isSuccess &&     <Container3>
-                        <H2  height="100%" width="100%" color="#878383">Book a 15 minute phone call</H2>
+                {!isSuccess && <Container3>
+                        <H2 height="100%" width="100%" color="#878383">Book a 15 minute phone call</H2>
                     </Container3>}
-                    {!isSuccess &&     <Divider/>}
+                    {!isSuccess && <Divider/>}
                     {/* <FormContextProvider> */}
-                    {!isSuccess &&        <ContactUs handleCancel={handleCancelButton}/>}
+                    {!isSuccess && <ContactUs handleCancel={handleCancelButton}/>}
                     {/* </FormContextProvider> */}
                 {isSuccess && <SuccessLayout />}
             </Container2>
