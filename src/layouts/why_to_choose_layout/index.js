@@ -41,7 +41,7 @@ const ListViewContainer = styled.ul`
 `
 
 const ListContainer = styled.li`
-    font-size: 24px;
+    font-size: 16px;
     text-align: left;
     padding-top: 10px;
     @media (max-width: 600px) {
