@@ -23,13 +23,13 @@ import { Image } from "../../elements/image";
 const CarouselContainer = styled.div`
     position: relative;
     width:100% !important;
-    height:720px !important;
+    height:720px;
     max-width: 100% !important;
-    max-height: 720px !important;
+    /* max-height: 720px !important; */
     z-index: 0;
     @media (max-width:600px){
-      width:100% !important;
-      height:450px !important;
+      /* width:100% !important; */
+      height:100%;
       /* overflow: hidden; */
       border-radius: 17px;
     } 
@@ -38,32 +38,20 @@ const CarouselContainer = styled.div`
 
 const ImageContainer =styled.div`
   width: 100%;
-  
+  height: 650px;
+  border-radius: 16px; 
+  overflow: hidden;
   @media (max-width:600px){
-      width:100% !important;
-      max-width:100% !important;
-      /* height:450px !important; */
+      /* width:100% !important; */
+      /* max-width:100% !important; */
+      height:90%;
   } 
 `
 
-const BannerImageContainer = styled.div`
-  width: 100%;
-  height: 650px;
-  /* background: ${props => `url(${props.src}) no-repeat center center`};
-  background-size: cover; */
-  border-radius: 20px;
-  position: relative;
-
-  @media (max-width: 600px) {
-    height: 600px;
-  }
-`;
-
 const StyledImage = styled.img`
   width: 100%;
-  height: 650px;
   object-fit: cover;
-  border-radius: 16px; 
+  
 `;
 
 export const LocalCarousel = (props) => {
