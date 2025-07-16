@@ -50,7 +50,7 @@ const GalleryLayoutContainer = styled.div`
     @media (max-width:600px){
         flex-direction: column;
         gap:10px;
-        height: 640px;
+        height: 100%;
         width: 100%;
         margin-bottom: 10px;
     } 
@@ -276,7 +276,7 @@ const ControlsContainer =styled.div`
     @media (max-width:600px){
         width: auto;
         position: absolute;
-        height: 100%;
+        /* height: 100%; */
         /* bottom: 10%; */
         border-radius:16px;
         /* left: -4%;
@@ -310,6 +310,7 @@ export const GalleryLayout2 = (props) =>{
     }
 
     const handleNextImageSeries =() => {
+        console.log('NEXT button clicked');
         var toUpdateActiveImageSeriesIndex = activeIndex;
         if(activeIndex===props.images.length-1) {
             toUpdateActiveImageSeriesIndex = 0
