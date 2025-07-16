@@ -2,6 +2,8 @@ import Carousel  from "react-bootstrap/Carousel";
 import React from "react";
 import "./ind.css"
 import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Image } from "../../elements/image";
 
 
 /**
@@ -45,31 +47,27 @@ const ImageContainer =styled.div`
 `
 
 const BannerImageContainer = styled.div`
-    /* display: flex; */
-    transition: transform .4s;
-    object-fit: cover;
-    width: 100%;
-    height: 650px;
-    max-height: 650px;
-    max-width: 100%;
-    background: ${(props) => `url(${props.src})`}  no-repeat fixed center; 
-    position: relative;
-    background-attachment:scroll;
-    background-size:cover;
-    background-position: center;
-    border-radius:20px;
-    @media(max-width:600px) {
-        height: 600px;
-        width: 100%;
-    }
-    
-    /* &:hover {
-        transform: ${props => props.isTransformOnHover? "scale(1.2)" :" scale(1)"};
-        transform-origin: ${props => props.isTransformOnHover?"50% 50%": "0% 0%"};       
-    } */
-`
+  width: 100%;
+  height: 650px;
+  /* background: ${props => `url(${props.src}) no-repeat center center`};
+  background-size: cover; */
+  border-radius: 20px;
+  position: relative;
+
+  @media (max-width: 600px) {
+    height: 600px;
+  }
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 16px; 
+`;
 
 export const LocalCarousel = (props) => {
+    console.log('Images', props.data);
   // const [currentSlide, setCurrentSlide] = useState(0);
 
     
@@ -84,17 +82,14 @@ export const LocalCarousel = (props) => {
 
     return (
       <CarouselContainer>
-        <Carousel fade activeIndex={props.index} onSelect={handleSelect}  interval ="1000" indicators={false} controls={false} >
+        <Carousel fade activeIndex={props.index} onSelect={handleSelect}  interval ={null} indicators={false} controls={false} >
                     {props.data.map((slide, i) => {
+                      console.log('SLIDE',slide);
+                      console.log('ACTIVE INDEX',props.index);
                         return (
                         <Carousel.Item>        
                            <ImageContainer>
-                            <BannerImageContainer
-                              height={props.height}
-                              width="100%"
-                              src={slide}
-                              alt="slider image"
-                              />
+                            <StyledImage src={slide}/>
                            </ImageContainer> 
                         </Carousel.Item>
                 ) 
