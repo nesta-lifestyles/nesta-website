@@ -44,7 +44,7 @@ const ImageContainer =styled.div`
   @media (max-width:600px){
       /* width:100% !important; */
       /* max-width:100% !important; */
-      height:90%;
+      height: 450px;
   } 
 `
 
@@ -52,6 +52,10 @@ const StyledImage = styled.img`
   width: 100%;
   object-fit: cover;
   
+  @media (max-width:600px){
+    height: 100%;    
+    display: block;   
+  } 
 `;
 
 export const LocalCarousel = (props) => {
